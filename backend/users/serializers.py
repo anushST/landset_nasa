@@ -14,6 +14,16 @@ from .exceptions import (
 User = get_user_model()
 
 
+class RefreshTokenSerializer(serializers.Serializer):
+    refresh = serializers.CharField(required=True, help_text='Refresh token')
+
+
+class LoginSerializer(serializers.Serializer):
+    """Serializer for user login."""
+    username_or_email = serializers.CharField(required=True)
+    password = serializers.CharField(required=True)
+
+
 class RegisterSerializer(serializers.ModelSerializer):
     """
     Serializer for handling user registration. It creates a user,
