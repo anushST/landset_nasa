@@ -1,10 +1,16 @@
 """URL configuration of users app."""
-from django.urls import path
+from django.urls import include, path
+from rest_framework.routers import SimpleRouter
 
 from .views import (
-    LoginAPIView, RefreshTokenAPIView, RegisterView, VerifyEmailView)
+    LoginAPIView, UserViewSet, RefreshTokenAPIView, RegisterView,
+    VerifyEmailView)
+
+router = SimpleRouter()
+router.register('users', UserViewSet, basename='user')
 
 urlpatterns = [
+    path('', include(router.urls)),
     path('auth/signup/', RegisterView.as_view(), name='user-register'),
     path('auth/login/', LoginAPIView.as_view(), name='login'),
     path('auth/token/refresh/', RefreshTokenAPIView.as_view(),

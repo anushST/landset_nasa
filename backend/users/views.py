@@ -4,14 +4,16 @@ from django.db.models import Q
 from django.shortcuts import get_object_or_404
 from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
-from rest_framework import status
+from rest_framework import permissions, status, viewsets
+from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
 from rest_framework_simplejwt.tokens import RefreshToken
 
 from .serializers import (
-    LoginSerializer, RegisterSerializer, RefreshTokenSerializer)
+    LoginSerializer, RegisterSerializer, RefreshTokenSerializer,
+    UserSerializer)
 
 User = get_user_model()
 
@@ -97,10 +99,8 @@ class LoginAPIView(APIView):
 
 
 class RefreshTokenAPIView(APIView):
-    """
-    API view for refreshing access tokens using a valid refresh token.
-    POST: Refreshes the access token using a valid refresh token.
-    """
+    """API view for refreshing access tokens using a valid refresh token."""
+
     permission_classes = [AllowAny]
 
     @swagger_auto_schema(
@@ -150,11 +150,7 @@ class RefreshTokenAPIView(APIView):
 
 
 class RegisterView(APIView):
-    """
-    API endpoint for user registration. This view allows new users
-    to register with their email, username, and password. After registration,
-    it sends a confirmation email to the user with a verification link.
-    """
+    """API endpoint for user registration."""
 
     permission_classes = (AllowAny,)
 
@@ -194,10 +190,7 @@ class RegisterView(APIView):
 
 
 class VerifyEmailView(APIView):
-    """
-    API endpoint for email verification. The user is activated when they
-    visit the confirmation link sent to their email after registration.
-    """
+    """API endpoint for email verification."""
 
     permission_classes = (AllowAny,)
 
@@ -244,3 +237,85 @@ class VerifyEmailView(APIView):
         except Exception:
             return Response({'error': 'Invalid or expired token'},
                             status=status.HTTP_400_BAD_REQUEST)
+
+
+class UserViewSet(viewsets.ViewSet):
+    """ViewSet for managing user accounts."""
+
+    permission_classes = [permissions.IsAuthenticated]
+
+    @swagger_auto_schema(
+        operation_description="Retrieve the current user's data.",
+        responses={
+            200: openapi.Response('User data retrieved successfully',
+                                  UserSerializer),
+            401: 'Unauthorized',
+        },
+        operation_summary="Get current user data",
+        tags=['Users']
+    )
+    @action(detail=False, methods=('get',),
+            url_path='me', url_name='current_user')
+    def current_user(self, request):
+        """Get the current user's data.
+
+        This endpoint retrieves the data of the currently authenticated user.
+
+        **Responses**:
+        - 200: Returns the user's data if the request is successful.
+        - 401: Returns an error if the user is not authenticated.
+        """
+        user = request.user
+        serializer = UserSerializer(user)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    @swagger_auto_schema(
+        method='put',
+        request_body=UserSerializer,
+        operation_description="Update the current user's data using PUT.",
+        responses={
+            200: openapi.Response('User data updated successfully',
+                                  UserSerializer),
+            400: 'Bad Request',
+            401: 'Unauthorized',
+        },
+        operation_summary="Update current user data (PUT)",
+        tags=['Users']
+    )
+    @swagger_auto_schema(
+        method='patch',
+        request_body=UserSerializer,
+        operation_description=('Partially update the current user'
+                               's data using PATCH.'),
+        responses={
+            200: openapi.Response('User data updated successfully',
+                                  UserSerializer),
+            400: 'Bad Request',
+            401: 'Unauthorized',
+        },
+        operation_summary="Partially update current user data (PATCH)",
+        tags=['Users']
+    )
+    @action(detail=False, methods=('put', 'patch',),
+            url_name='update_user')
+    def update_user(self, request, pk):
+        """Update the current user's data.
+
+        This endpoint allows the authenticated user to update their
+        profile information.
+
+        **Request body**:
+        - `first_name`: Optional. The user's new first name.
+        - `last_name`: Optional. The user's new last name.
+
+        **Responses**:
+        - 200: Returns the updated user data if the request is successful.
+        - 400: Returns an error if the update data is invalid.
+        - 401: Returns an error if the user is not authenticated.
+        """
+        user = request.user
+        serializer = UserSerializer(user, data=request.data, partial=True)
+
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_200_OK)
