@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'api.apps.ApiConfig',
     'users.apps.UsersConfig',
+    'acqusitions.apps.AcqusitionsConfig',
 ]
 
 MIDDLEWARE = [

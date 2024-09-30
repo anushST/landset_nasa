@@ -15,8 +15,7 @@ User = get_user_model()
 
 
 class UserSerializer(serializers.ModelSerializer):
-    """
-    Serializer for the User model.
+    """Serializer for the User model.
 
     **Fields**:
     - `username`: CharField, required, unique identifier for the user
@@ -36,41 +35,42 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class RefreshTokenSerializer(serializers.Serializer):
-    """
-    Serializer for refreshing access tokens.
+    """Serializer for refreshing access tokens.
 
     **Fields**:
     - `refresh`: Required. The refresh token used to generate a
     new access token.
     """
+
     refresh = serializers.CharField(required=True, help_text='Refresh token')
 
 
 class LoginSerializer(serializers.Serializer):
-    """
-    Serializer for user login.
+    """Serializer for user login.
 
     **Fields**:
     - `username_or_email`: Required. The username or email of the user.
     - `password`: Required. The password for the user account.
     """
+
     username_or_email = serializers.CharField(required=True)
     password = serializers.CharField(required=True)
 
 
 class RegisterSerializer(serializers.ModelSerializer):
-    """
-    Serializer for handling user registration.
+    """Serializer for handling user registration.
 
     **Fields**:
     - `first_name`: User's first name. Required.
-    - `last_name`: User's last name. Required.
+    - `last_name`: User's last name. Not required.
     - `email`: Unique email address of the user. Required.
     - `username`: Unique username for the user. Required.
     - `password`: User's password. Required, not returned in responses.
     """
 
     class Meta:
+        """Meta-data of the RegisterSerializer class."""
+
         model = User
         fields = ('first_name', 'last_name', 'email', 'username', 'password',)
         extra_kwargs = {
@@ -103,8 +103,9 @@ class RegisterSerializer(serializers.ModelSerializer):
             raise EmailConfirmationTokenInvalidError('Token is invalid')
 
     def create(self, validated_data: dict):
-        """
-        This method creates a new user, sets their account as inactive
+        """Create a new user.
+
+        Sets their account as inactive
         until email confirmation, and sends a confirmation email.
         """
         password = validated_data.pop('password')

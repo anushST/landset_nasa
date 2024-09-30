@@ -19,8 +19,7 @@ User = get_user_model()
 
 
 def get_tokens_for_user(user):
-    """
-    Generate refresh and access JWT tokens for the given user.
+    """Generate refresh and access JWT tokens for the given user.
 
     This function creates a refresh token and an access token for the specified
     Django user instance. The tokens are generated using the RefreshToken class
@@ -59,8 +58,7 @@ class LoginAPIView(APIView):
         tags=['Auth']
     )
     def post(self, request):
-        """
-        Authenticate user and return JWT tokens.
+        """Authenticate user and return JWT tokens.
 
         This endpoint allows users to log in with either their
         username or email
@@ -119,8 +117,7 @@ class RefreshTokenAPIView(APIView):
         tags=['Auth']
     )
     def post(self, request):
-        """
-        Generate a new access token from a valid refresh token.
+        """Generate a new access token from a valid refresh token.
 
         This endpoint allows users to refresh their access token
         by providing a valid refresh token. If the refresh token
@@ -166,8 +163,7 @@ class RegisterView(APIView):
         tags=['Auth']
     )
     def post(self, request):
-        """
-        Register a new user and send a confirmation email.
+        """Register a new user and send a confirmation email.
 
         This endpoint allows new users to register by providing their
         email, username, and password. Upon successful registration,
@@ -209,8 +205,7 @@ class VerifyEmailView(APIView):
         tags=['Auth']
     )
     def get(self, request, token):
-        """
-        Verify a user's email by validating the provided token.
+        """Verify a user's email by validating the provided token.
 
         This endpoint allows users to confirm their email address
         by visiting a confirmation link sent to their email after

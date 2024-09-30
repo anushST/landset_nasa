@@ -1,0 +1,4219 @@
+type: Feature
+stac_version: 1.0.0
+id: LC08_L2SP_154033_20240924_20240928_02_T1_SR
+properties:
+  datetime: 2024-09-24T06:05:23.852345Z
+  eo:cloud_cover: 0.19
+  view:sun_azimuth: 152.64377903
+  view:sun_elevation: 47.02122751
+  platform: LANDSAT_8
+  instruments:
+    OLI
+    TIRS
+  view:off_nadir: 0
+  landsat:cloud_cover_land: 0.19
+  landsat:wrs_type: 2
+  landsat:wrs_path: 154
+  landsat:wrs_row: 033
+  landsat:scene_id: LC81540332024268LGN00
+  landsat:collection_category: T1
+  landsat:collection_number: 02
+  landsat:correction: L2SP
+  accuracy:geometric_x_bias: 0
+  accuracy:geometric_y_bias: 0
+  accuracy:geometric_x_stddev: 4.219
+  accuracy:geometric_y_stddev: 3.726
+  accuracy:geometric_rmse: 5.629
+  proj:epsg: 32642
+  proj:shape:
+    7891
+    7771
+  proj:transform:
+    30
+    0
+    328785
+    0
+    -30
+    4424115
+  card4l:specification: SR
+  card4l:specification_version: 5.0
+  created: 2024-09-28T10:23:10.706Z
+  updated: 2024-09-28T10:23:10.706Z
+geometry:
+  type: Polygon
+  coordinates:
+    [[67.56840151007599, 39.95401931356789], [67.06666646125822, 38.235437611251186], [69.12678462580699, 37.84328527902017], [69.67604232420555, 39.56084159406031], [67.56840151007599, 39.95401931356789]]
+links:
+  rel: self
+  href: https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_154033_20240924_20240928_02_T1_SR
+  rel: parent
+  href: https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr
+  rel: collection
+  href: https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr
+  rel: root
+  href: https://landsatlook.usgs.gov/stac-server
+  type: application/json
+  title: STAC API
+assets:
+  thumbnail:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_thumb_small.jpeg
+    type: image/jpeg
+    title: Thumbnail image
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_thumb_small.jpeg
+    roles:
+      thumbnail
+  reduced_resolution_browse:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_thumb_large.jpeg
+    type: image/jpeg
+    title: Reduced resolution browse image
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_thumb_large.jpeg
+    roles:
+      overview
+  index:
+    href: https://landsatlook.usgs.gov/stac-browser/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1
+    type: text/html
+    title: HTML index page
+    roles:
+      metadata
+  MTL.json:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_MTL.json
+    type: application/json
+    title: Product Metadata File (json)
+    description: Collection 2 Level-2 Product Metadata File (json)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_MTL.json
+    roles:
+      metadata
+  coastal:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_SR_B1.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Coastal/Aerosol Band (B1)
+    description: Collection 2 Level-2 Coastal/Aerosol Band (B1) Surface Reflectance
+    eo:bands:
+      name: B1
+      common_name: coastal
+      gsd: 30
+      center_wavelength: 0.44
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_SR_B1.TIF
+    roles:
+      data
+  blue:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_SR_B2.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Blue Band (B2)
+    description: Collection 2 Level-2 Blue Band (B2) Surface Reflectance
+    eo:bands:
+      name: B2
+      common_name: blue
+      gsd: 30
+      center_wavelength: 0.48
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_SR_B2.TIF
+    roles:
+      data
+  green:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_SR_B3.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Green Band (B3)
+    description: Collection 2 Level-2 Green Band (B3) Surface Reflectance
+    eo:bands:
+      name: B3
+      common_name: green
+      gsd: 30
+      center_wavelength: 0.56
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_SR_B3.TIF
+    roles:
+      data
+  red:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_SR_B4.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Red Band (B4)
+    description: Collection 2 Level-2 Red Band (B4) Surface Reflectance
+    eo:bands:
+      name: B4
+      common_name: red
+      gsd: 30
+      center_wavelength: 0.65
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_SR_B4.TIF
+    roles:
+      data
+  nir08:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_SR_B5.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Near Infrared Band 0.8 (B5)
+    description: Collection 2 Level-2 Near Infrared Band 0.8 (B5) Surface Reflectance
+    eo:bands:
+      name: B5
+      common_name: nir08
+      gsd: 30
+      center_wavelength: 0.86
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_SR_B5.TIF
+    roles:
+      data
+      reflectance
+  swir16:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_SR_B6.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Short-wave Infrared Band 1.6 (B6)
+    description: Collection 2 Level-2 Short-wave Infrared Band 1.6 (B6) Surface Reflectance
+    eo:bands:
+      name: B6
+      common_name: swir16
+      gsd: 30
+      center_wavelength: 1.6
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_SR_B6.TIF
+    roles:
+      data
+      reflectance
+  swir22:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_SR_B7.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Short-wave Infrared Band 2.2 (B7)
+    description: Collection 2 Level-2 Short-wave Infrared Band 2.2 (B7) Surface Reflectance
+    eo:bands:
+      name: B7
+      common_name: swir22
+      gsd: 30
+      center_wavelength: 2.2
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_SR_B7.TIF
+    roles:
+      data
+      reflectance
+  qa_aerosol:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_SR_QA_AEROSOL.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Aerosol Quality Analysis Band
+    description: Collection 2 Level-2 Aerosol Quality Analysis Band Surface Reflectance
+    classification:bitfields:
+      name: fill
+      description: Corresponding pixels in L1 image bands are fill
+      offset: 0
+      length: 1
+      classes:
+        name: not_fill
+        description: L1 image band pixels are not fill
+        value: 0
+        name: fill
+        description: L1 image band pixels are fill
+        value: 1
+      name: retrieval
+      description: Valid aerosol retrieval
+      offset: 1
+      length: 1
+      classes:
+        name: not_valid
+        description: Aerosol retrieval is not valid
+        value: 0
+        name: valid
+        description: Aerosol retrieval is valid
+        value: 1
+      name: water
+      description: Water mask
+      offset: 2
+      length: 1
+      classes:
+        name: not_water
+        description: Not water
+        value: 0
+        name: water
+        description: Water
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 3
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 4
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: interpolated
+      description: Aerosol is interpolated
+      offset: 5
+      length: 1
+      classes:
+        name: not_interpolated
+        description: Aerosol is not interpolated
+        value: 0
+        name: interpolated
+        description: Aerosol is interpolated
+        value: 1
+      name: level
+      description: Aerosol level
+      offset: 6
+      length: 2
+      classes:
+        name: climatology
+        description: No aerosol correction applied
+        value: 0
+        name: low
+        description: Low aerosol level
+        value: 1
+        name: medium
+        description: Medium aerosol level
+        value: 2
+        name: high
+        description: High aerosol level
+        value: 3
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_SR_QA_AEROSOL.TIF
+    roles:
+      metadata
+      data-mask
+      water-mask
+  qa_pixel:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_QA_PIXEL.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Pixel Quality Assessment Band
+    description: Collection 2 Level-2 Pixel Quality Assessment Band Surface Reflectance
+    classification:bitfields:
+      name: fill
+      description: Corresponding pixels in L1 image bands are fill
+      offset: 0
+      length: 1
+      classes:
+        name: not_fill
+        description: L1 image band pixels are not fill
+        value: 0
+        name: fill
+        description: L1 image band pixels are fill
+        value: 1
+      name: dilated
+      description: Dilated cloud
+      offset: 1
+      length: 1
+      classes:
+        name: not_dilated
+        description: Cloud is not dilated or no cloud
+        value: 0
+        name: dilated
+        description: Cloud dilation
+        value: 1
+      name: cirrus
+      description: Cirrus mask
+      offset: 2
+      length: 1
+      classes:
+        name: not_cirrus
+        description: No confidence level set or low confidence cirrus
+        value: 0
+        name: cirrus
+        description: High confidence cirrus
+        value: 1
+      name: cloud
+      description: Cloud mask
+      offset: 3
+      length: 1
+      classes:
+        name: not_cloud
+        description: Cloud confidence is not high
+        value: 0
+        name: cloud
+        description: High confidence cloud
+        value: 1
+      name: shadow
+      description: Cloud shadow mask
+      offset: 4
+      length: 1
+      classes:
+        name: not_shadow
+        description: Cloud shadow confidence is not high
+        value: 0
+        name: shadow
+        description: High confidence cloud shadow
+        value: 1
+      name: snow
+      description: Snow/Ice mask
+      offset: 5
+      length: 1
+      classes:
+        name: not_snow
+        description: Snow/Ice confidence is not high
+        value: 0
+        name: snow
+        description: High confidence snow cover
+        value: 1
+      name: clear
+      description: Cloud or dilated cloud bits set
+      offset: 6
+      length: 1
+      classes:
+        name: not_clear
+        description: Cloud or dilated cloud bits are set
+        value: 0
+        name: clear
+        description: Cloud and dilated cloud bits are not set
+        value: 1
+      name: water
+      description: Water mask
+      offset: 7
+      length: 1
+      classes:
+        name: not_water
+        description: Land or cloud
+        value: 0
+        name: water
+        description: Water
+        value: 1
+      name: cloud_confidence
+      description: Cloud confidence levels
+      offset: 8
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence cloud
+        value: 1
+        name: medium
+        description: Medium confidence cloud
+        value: 2
+        name: high
+        description: High confidence cloud
+        value: 3
+      name: shadow_confidence
+      description: Cloud shadow confidence levels
+      offset: 10
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence cloud shadow
+        value: 1
+        name: reserved
+        description: Reserved - value not used
+        value: 2
+        name: high
+        description: High confidence cloud shadow
+        value: 3
+      name: snow_confidence
+      description: Snow/Ice confidence levels
+      offset: 12
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence snow/ice
+        value: 1
+        name: reserved
+        description: Reserved - value not used
+        value: 2
+        name: high
+        description: High confidence snow/ice
+        value: 3
+      name: cirrus_confidence
+      description: Cirrus confidence levels
+      offset: 14
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence cirrus
+        value: 1
+        name: reserved
+        description: Reserved - value not used
+        value: 2
+        name: high
+        description: High confidence cirrus
+        value: 3
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_QA_PIXEL.TIF
+    roles:
+      cloud
+      cloud-shadow
+      snow-ice
+      water-mask
+  qa_radsat:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_QA_RADSAT.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Radiometric Saturation Quality Assessment Band
+    description: Collection 2 Level-2 Radiometric Saturation Quality Assessment Band Surface Reflectance
+    classification:bitfields:
+      name: band1
+      description: Band 1 radiometric saturation
+      offset: 0
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 1 is not saturated
+        value: 0
+        name: saturated
+        description: Band 1 is saturated
+        value: 1
+      name: band2
+      description: Band 2 radiometric saturation
+      offset: 1
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 2 is not saturated
+        value: 0
+        name: saturated
+        description: Band 2 is saturated
+        value: 1
+      name: band3
+      description: Band 3 radiometric saturation
+      offset: 2
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 3 is not saturated
+        value: 0
+        name: saturated
+        description: Band 3 is saturated
+        value: 1
+      name: band4
+      description: Band 4 radiometric saturation
+      offset: 3
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 4 is not saturated
+        value: 0
+        name: saturated
+        description: Band 4 is saturated
+        value: 1
+      name: band5
+      description: Band 5 radiometric saturation
+      offset: 4
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 5 is not saturated
+        value: 0
+        name: saturated
+        description: Band 5 is saturated
+        value: 1
+      name: band6
+      description: Band 6 radiometric saturation
+      offset: 5
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 6 is not saturated
+        value: 0
+        name: saturated
+        description: Band 6 is saturated
+        value: 1
+      name: band7
+      description: Band 7 radiometric saturation
+      offset: 6
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 7 is not saturated
+        value: 0
+        name: saturated
+        description: Band 7 is saturated
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 7
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: band9
+      description: Band 9 radiometric saturation
+      offset: 8
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 9 is not saturated
+        value: 0
+        name: saturated
+        description: Band 9 is saturated
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 9
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 10
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: occlusion
+      description: Terrain not visible from sensor due to intervening terrain
+      offset: 11
+      length: 1
+      classes:
+        name: not_occluded
+        description: Terrain is not occluded
+        value: 0
+        name: occluded
+        description: Terrain is occluded
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 12
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 13
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 14
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 15
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_QA_RADSAT.TIF
+    roles:
+      saturation
+  ANG.txt:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_ANG.txt
+    type: text/plain
+    title: Angle Coefficients File
+    description: Collection 2 Level-2 Angle Coefficients File (ANG)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_ANG.txt
+    roles:
+      metadata
+  MTL.txt:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_MTL.txt
+    type: text/plain
+    title: Product Metadata File
+    description: Collection 2 Level-2 Product Metadata File (MTL)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_MTL.txt
+    roles:
+      metadata
+  MTL.xml:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_MTL.xml
+    type: application/xml
+    title: Product Metadata File (xml)
+    description: Collection 2 Level-2 Product Metadata File (xml)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240924_20240928_02_T1/LC08_L2SP_154033_20240924_20240928_02_T1_MTL.xml
+    roles:
+      metadata
+bbox:
+  67.06666646125822
+  37.84328527902017
+  69.67604232420555
+  39.95401931356789
+stac_extensions:
+  https://landsat.usgs.gov/stac/landsat-extension/v1.1.1/schema.json
+  https://stac-extensions.github.io/view/v1.0.0/schema.json
+  https://stac-extensions.github.io/projection/v1.0.0/schema.json
+  https://stac-extensions.github.io/eo/v1.0.0/schema.json
+  https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json
+  https://stac-extensions.github.io/storage/v1.0.0/schema.json
+  https://stac-extensions.github.io/accuracy/v1.0.0/schema.json
+  https://stac-extensions.github.io/card4l/v0.1.0/optical/schema.json
+  https://stac-extensions.github.io/classification/v1.0.0/schema.json
+collection: landsat-c2l2-sr
+description: Landsat Collection 2 Level-2 Surface Reflectance Producttype: Feature
+stac_version: 1.0.0
+id: LC08_L2SP_153033_20240917_20240921_02_T1_SR
+properties:
+  datetime: 2024-09-17T05:59:15.350060Z
+  eo:cloud_cover: 76.92
+  view:sun_azimuth: 150.25233693
+  view:sun_elevation: 49.31265405
+  platform: LANDSAT_8
+  instruments:
+    OLI
+    TIRS
+  view:off_nadir: 0
+  landsat:cloud_cover_land: 76.92
+  landsat:wrs_type: 2
+  landsat:wrs_path: 153
+  landsat:wrs_row: 033
+  landsat:scene_id: LC81530332024261LGN00
+  landsat:collection_category: T1
+  landsat:collection_number: 02
+  landsat:correction: L2SP
+  accuracy:geometric_x_bias: 0
+  accuracy:geometric_y_bias: 0
+  accuracy:geometric_x_stddev: 5.314
+  accuracy:geometric_y_stddev: 3.918
+  accuracy:geometric_rmse: 6.602
+  proj:epsg: 32642
+  proj:shape:
+    7811
+    7691
+  proj:transform:
+    30
+    0
+    462585
+    0
+    -30
+    4423215
+  card4l:specification: SR
+  card4l:specification_version: 5.0
+  created: 2024-09-22T05:24:31.286Z
+  updated: 2024-09-22T05:24:31.286Z
+geometry:
+  type: Polygon
+  coordinates:
+    [[69.09968653106687, 39.95335628230508], [68.59681785342656, 38.23526032085716], [70.65360659098535, 37.84363925079935], [71.20728196177708, 39.56022248530639], [69.09968653106687, 39.95335628230508]]
+links:
+  rel: self
+  href: https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_153033_20240917_20240921_02_T1_SR
+  rel: parent
+  href: https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr
+  rel: collection
+  href: https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr
+  rel: root
+  href: https://landsatlook.usgs.gov/stac-server
+  type: application/json
+  title: STAC API
+assets:
+  thumbnail:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_thumb_small.jpeg
+    type: image/jpeg
+    title: Thumbnail image
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_thumb_small.jpeg
+    roles:
+      thumbnail
+  reduced_resolution_browse:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_thumb_large.jpeg
+    type: image/jpeg
+    title: Reduced resolution browse image
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_thumb_large.jpeg
+    roles:
+      overview
+  index:
+    href: https://landsatlook.usgs.gov/stac-browser/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1
+    type: text/html
+    title: HTML index page
+    roles:
+      metadata
+  MTL.json:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_MTL.json
+    type: application/json
+    title: Product Metadata File (json)
+    description: Collection 2 Level-2 Product Metadata File (json)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_MTL.json
+    roles:
+      metadata
+  coastal:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_SR_B1.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Coastal/Aerosol Band (B1)
+    description: Collection 2 Level-2 Coastal/Aerosol Band (B1) Surface Reflectance
+    eo:bands:
+      name: B1
+      common_name: coastal
+      gsd: 30
+      center_wavelength: 0.44
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_SR_B1.TIF
+    roles:
+      data
+  blue:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_SR_B2.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Blue Band (B2)
+    description: Collection 2 Level-2 Blue Band (B2) Surface Reflectance
+    eo:bands:
+      name: B2
+      common_name: blue
+      gsd: 30
+      center_wavelength: 0.48
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_SR_B2.TIF
+    roles:
+      data
+  green:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_SR_B3.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Green Band (B3)
+    description: Collection 2 Level-2 Green Band (B3) Surface Reflectance
+    eo:bands:
+      name: B3
+      common_name: green
+      gsd: 30
+      center_wavelength: 0.56
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_SR_B3.TIF
+    roles:
+      data
+  red:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_SR_B4.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Red Band (B4)
+    description: Collection 2 Level-2 Red Band (B4) Surface Reflectance
+    eo:bands:
+      name: B4
+      common_name: red
+      gsd: 30
+      center_wavelength: 0.65
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_SR_B4.TIF
+    roles:
+      data
+  nir08:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_SR_B5.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Near Infrared Band 0.8 (B5)
+    description: Collection 2 Level-2 Near Infrared Band 0.8 (B5) Surface Reflectance
+    eo:bands:
+      name: B5
+      common_name: nir08
+      gsd: 30
+      center_wavelength: 0.86
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_SR_B5.TIF
+    roles:
+      data
+      reflectance
+  swir16:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_SR_B6.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Short-wave Infrared Band 1.6 (B6)
+    description: Collection 2 Level-2 Short-wave Infrared Band 1.6 (B6) Surface Reflectance
+    eo:bands:
+      name: B6
+      common_name: swir16
+      gsd: 30
+      center_wavelength: 1.6
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_SR_B6.TIF
+    roles:
+      data
+      reflectance
+  swir22:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_SR_B7.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Short-wave Infrared Band 2.2 (B7)
+    description: Collection 2 Level-2 Short-wave Infrared Band 2.2 (B7) Surface Reflectance
+    eo:bands:
+      name: B7
+      common_name: swir22
+      gsd: 30
+      center_wavelength: 2.2
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_SR_B7.TIF
+    roles:
+      data
+      reflectance
+  qa_aerosol:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_SR_QA_AEROSOL.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Aerosol Quality Analysis Band
+    description: Collection 2 Level-2 Aerosol Quality Analysis Band Surface Reflectance
+    classification:bitfields:
+      name: fill
+      description: Corresponding pixels in L1 image bands are fill
+      offset: 0
+      length: 1
+      classes:
+        name: not_fill
+        description: L1 image band pixels are not fill
+        value: 0
+        name: fill
+        description: L1 image band pixels are fill
+        value: 1
+      name: retrieval
+      description: Valid aerosol retrieval
+      offset: 1
+      length: 1
+      classes:
+        name: not_valid
+        description: Aerosol retrieval is not valid
+        value: 0
+        name: valid
+        description: Aerosol retrieval is valid
+        value: 1
+      name: water
+      description: Water mask
+      offset: 2
+      length: 1
+      classes:
+        name: not_water
+        description: Not water
+        value: 0
+        name: water
+        description: Water
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 3
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 4
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: interpolated
+      description: Aerosol is interpolated
+      offset: 5
+      length: 1
+      classes:
+        name: not_interpolated
+        description: Aerosol is not interpolated
+        value: 0
+        name: interpolated
+        description: Aerosol is interpolated
+        value: 1
+      name: level
+      description: Aerosol level
+      offset: 6
+      length: 2
+      classes:
+        name: climatology
+        description: No aerosol correction applied
+        value: 0
+        name: low
+        description: Low aerosol level
+        value: 1
+        name: medium
+        description: Medium aerosol level
+        value: 2
+        name: high
+        description: High aerosol level
+        value: 3
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_SR_QA_AEROSOL.TIF
+    roles:
+      metadata
+      data-mask
+      water-mask
+  qa_pixel:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_QA_PIXEL.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Pixel Quality Assessment Band
+    description: Collection 2 Level-2 Pixel Quality Assessment Band Surface Reflectance
+    classification:bitfields:
+      name: fill
+      description: Corresponding pixels in L1 image bands are fill
+      offset: 0
+      length: 1
+      classes:
+        name: not_fill
+        description: L1 image band pixels are not fill
+        value: 0
+        name: fill
+        description: L1 image band pixels are fill
+        value: 1
+      name: dilated
+      description: Dilated cloud
+      offset: 1
+      length: 1
+      classes:
+        name: not_dilated
+        description: Cloud is not dilated or no cloud
+        value: 0
+        name: dilated
+        description: Cloud dilation
+        value: 1
+      name: cirrus
+      description: Cirrus mask
+      offset: 2
+      length: 1
+      classes:
+        name: not_cirrus
+        description: No confidence level set or low confidence cirrus
+        value: 0
+        name: cirrus
+        description: High confidence cirrus
+        value: 1
+      name: cloud
+      description: Cloud mask
+      offset: 3
+      length: 1
+      classes:
+        name: not_cloud
+        description: Cloud confidence is not high
+        value: 0
+        name: cloud
+        description: High confidence cloud
+        value: 1
+      name: shadow
+      description: Cloud shadow mask
+      offset: 4
+      length: 1
+      classes:
+        name: not_shadow
+        description: Cloud shadow confidence is not high
+        value: 0
+        name: shadow
+        description: High confidence cloud shadow
+        value: 1
+      name: snow
+      description: Snow/Ice mask
+      offset: 5
+      length: 1
+      classes:
+        name: not_snow
+        description: Snow/Ice confidence is not high
+        value: 0
+        name: snow
+        description: High confidence snow cover
+        value: 1
+      name: clear
+      description: Cloud or dilated cloud bits set
+      offset: 6
+      length: 1
+      classes:
+        name: not_clear
+        description: Cloud or dilated cloud bits are set
+        value: 0
+        name: clear
+        description: Cloud and dilated cloud bits are not set
+        value: 1
+      name: water
+      description: Water mask
+      offset: 7
+      length: 1
+      classes:
+        name: not_water
+        description: Land or cloud
+        value: 0
+        name: water
+        description: Water
+        value: 1
+      name: cloud_confidence
+      description: Cloud confidence levels
+      offset: 8
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence cloud
+        value: 1
+        name: medium
+        description: Medium confidence cloud
+        value: 2
+        name: high
+        description: High confidence cloud
+        value: 3
+      name: shadow_confidence
+      description: Cloud shadow confidence levels
+      offset: 10
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence cloud shadow
+        value: 1
+        name: reserved
+        description: Reserved - value not used
+        value: 2
+        name: high
+        description: High confidence cloud shadow
+        value: 3
+      name: snow_confidence
+      description: Snow/Ice confidence levels
+      offset: 12
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence snow/ice
+        value: 1
+        name: reserved
+        description: Reserved - value not used
+        value: 2
+        name: high
+        description: High confidence snow/ice
+        value: 3
+      name: cirrus_confidence
+      description: Cirrus confidence levels
+      offset: 14
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence cirrus
+        value: 1
+        name: reserved
+        description: Reserved - value not used
+        value: 2
+        name: high
+        description: High confidence cirrus
+        value: 3
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_QA_PIXEL.TIF
+    roles:
+      cloud
+      cloud-shadow
+      snow-ice
+      water-mask
+  qa_radsat:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_QA_RADSAT.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Radiometric Saturation Quality Assessment Band
+    description: Collection 2 Level-2 Radiometric Saturation Quality Assessment Band Surface Reflectance
+    classification:bitfields:
+      name: band1
+      description: Band 1 radiometric saturation
+      offset: 0
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 1 is not saturated
+        value: 0
+        name: saturated
+        description: Band 1 is saturated
+        value: 1
+      name: band2
+      description: Band 2 radiometric saturation
+      offset: 1
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 2 is not saturated
+        value: 0
+        name: saturated
+        description: Band 2 is saturated
+        value: 1
+      name: band3
+      description: Band 3 radiometric saturation
+      offset: 2
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 3 is not saturated
+        value: 0
+        name: saturated
+        description: Band 3 is saturated
+        value: 1
+      name: band4
+      description: Band 4 radiometric saturation
+      offset: 3
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 4 is not saturated
+        value: 0
+        name: saturated
+        description: Band 4 is saturated
+        value: 1
+      name: band5
+      description: Band 5 radiometric saturation
+      offset: 4
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 5 is not saturated
+        value: 0
+        name: saturated
+        description: Band 5 is saturated
+        value: 1
+      name: band6
+      description: Band 6 radiometric saturation
+      offset: 5
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 6 is not saturated
+        value: 0
+        name: saturated
+        description: Band 6 is saturated
+        value: 1
+      name: band7
+      description: Band 7 radiometric saturation
+      offset: 6
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 7 is not saturated
+        value: 0
+        name: saturated
+        description: Band 7 is saturated
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 7
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: band9
+      description: Band 9 radiometric saturation
+      offset: 8
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 9 is not saturated
+        value: 0
+        name: saturated
+        description: Band 9 is saturated
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 9
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 10
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: occlusion
+      description: Terrain not visible from sensor due to intervening terrain
+      offset: 11
+      length: 1
+      classes:
+        name: not_occluded
+        description: Terrain is not occluded
+        value: 0
+        name: occluded
+        description: Terrain is occluded
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 12
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 13
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 14
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 15
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_QA_RADSAT.TIF
+    roles:
+      saturation
+  ANG.txt:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_ANG.txt
+    type: text/plain
+    title: Angle Coefficients File
+    description: Collection 2 Level-2 Angle Coefficients File (ANG)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_ANG.txt
+    roles:
+      metadata
+  MTL.txt:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_MTL.txt
+    type: text/plain
+    title: Product Metadata File
+    description: Collection 2 Level-2 Product Metadata File (MTL)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_MTL.txt
+    roles:
+      metadata
+  MTL.xml:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_MTL.xml
+    type: application/xml
+    title: Product Metadata File (xml)
+    description: Collection 2 Level-2 Product Metadata File (xml)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240917_20240921_02_T1/LC08_L2SP_153033_20240917_20240921_02_T1_MTL.xml
+    roles:
+      metadata
+bbox:
+  68.59681785342656
+  37.84363925079935
+  71.20728196177708
+  39.95335628230508
+stac_extensions:
+  https://landsat.usgs.gov/stac/landsat-extension/v1.1.1/schema.json
+  https://stac-extensions.github.io/view/v1.0.0/schema.json
+  https://stac-extensions.github.io/projection/v1.0.0/schema.json
+  https://stac-extensions.github.io/eo/v1.0.0/schema.json
+  https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json
+  https://stac-extensions.github.io/storage/v1.0.0/schema.json
+  https://stac-extensions.github.io/accuracy/v1.0.0/schema.json
+  https://stac-extensions.github.io/card4l/v0.1.0/optical/schema.json
+  https://stac-extensions.github.io/classification/v1.0.0/schema.json
+collection: landsat-c2l2-sr
+description: Landsat Collection 2 Level-2 Surface Reflectance Producttype: Feature
+stac_version: 1.0.0
+id: LC09_L2SP_154033_20240916_20240917_02_T1_SR
+properties:
+  datetime: 2024-09-16T06:05:20.397797Z
+  eo:cloud_cover: 77.13
+  view:sun_azimuth: 149.8655879
+  view:sun_elevation: 49.62364886
+  platform: LANDSAT_9
+  instruments:
+    OLI
+    TIRS
+  view:off_nadir: 0
+  landsat:cloud_cover_land: 77.13
+  landsat:wrs_type: 2
+  landsat:wrs_path: 154
+  landsat:wrs_row: 033
+  landsat:scene_id: LC91540332024260LGN00
+  landsat:collection_category: T1
+  landsat:collection_number: 02
+  landsat:correction: L2SP
+  accuracy:geometric_x_bias: 0
+  accuracy:geometric_y_bias: 0
+  accuracy:geometric_x_stddev: 4.947
+  accuracy:geometric_y_stddev: 4.442
+  accuracy:geometric_rmse: 6.648
+  proj:epsg: 32642
+  proj:shape:
+    7881
+    7771
+  proj:transform:
+    30
+    0
+    327585
+    0
+    -30
+    4424115
+  card4l:specification: SR
+  card4l:specification_version: 5.0
+  created: 2024-09-17T13:00:34.142Z
+  updated: 2024-09-17T13:00:34.142Z
+geometry:
+  type: Polygon
+  coordinates:
+    [[67.56318578721162, 39.95152224554161], [67.06124230353011, 38.23318539034674], [69.12882762894854, 37.84166069732959], [69.6784709396976, 39.55920557518524], [67.56318578721162, 39.95152224554161]]
+links:
+  rel: self
+  href: https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC09_L2SP_154033_20240916_20240917_02_T1_SR
+  rel: parent
+  href: https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr
+  rel: collection
+  href: https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr
+  rel: root
+  href: https://landsatlook.usgs.gov/stac-server
+  type: application/json
+  title: STAC API
+assets:
+  thumbnail:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_thumb_small.jpeg
+    type: image/jpeg
+    title: Thumbnail image
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_thumb_small.jpeg
+    roles:
+      thumbnail
+  reduced_resolution_browse:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_thumb_large.jpeg
+    type: image/jpeg
+    title: Reduced resolution browse image
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_thumb_large.jpeg
+    roles:
+      overview
+  index:
+    href: https://landsatlook.usgs.gov/stac-browser/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1
+    type: text/html
+    title: HTML index page
+    roles:
+      metadata
+  MTL.json:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_MTL.json
+    type: application/json
+    title: Product Metadata File (json)
+    description: Collection 2 Level-2 Product Metadata File (json)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_MTL.json
+    roles:
+      metadata
+  coastal:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_SR_B1.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Coastal/Aerosol Band (B1)
+    description: Collection 2 Level-2 Coastal/Aerosol Band (B1) Surface Reflectance
+    eo:bands:
+      name: B1
+      common_name: coastal
+      gsd: 30
+      center_wavelength: 0.44
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_SR_B1.TIF
+    roles:
+      data
+  blue:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_SR_B2.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Blue Band (B2)
+    description: Collection 2 Level-2 Blue Band (B2) Surface Reflectance
+    eo:bands:
+      name: B2
+      common_name: blue
+      gsd: 30
+      center_wavelength: 0.48
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_SR_B2.TIF
+    roles:
+      data
+  green:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_SR_B3.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Green Band (B3)
+    description: Collection 2 Level-2 Green Band (B3) Surface Reflectance
+    eo:bands:
+      name: B3
+      common_name: green
+      gsd: 30
+      center_wavelength: 0.56
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_SR_B3.TIF
+    roles:
+      data
+  red:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_SR_B4.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Red Band (B4)
+    description: Collection 2 Level-2 Red Band (B4) Surface Reflectance
+    eo:bands:
+      name: B4
+      common_name: red
+      gsd: 30
+      center_wavelength: 0.65
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_SR_B4.TIF
+    roles:
+      data
+  nir08:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_SR_B5.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Near Infrared Band 0.8 (B5)
+    description: Collection 2 Level-2 Near Infrared Band 0.8 (B5) Surface Reflectance
+    eo:bands:
+      name: B5
+      common_name: nir08
+      gsd: 30
+      center_wavelength: 0.86
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_SR_B5.TIF
+    roles:
+      data
+      reflectance
+  swir16:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_SR_B6.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Short-wave Infrared Band 1.6 (B6)
+    description: Collection 2 Level-2 Short-wave Infrared Band 1.6 (B6) Surface Reflectance
+    eo:bands:
+      name: B6
+      common_name: swir16
+      gsd: 30
+      center_wavelength: 1.6
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_SR_B6.TIF
+    roles:
+      data
+      reflectance
+  swir22:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_SR_B7.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Short-wave Infrared Band 2.2 (B7)
+    description: Collection 2 Level-2 Short-wave Infrared Band 2.2 (B7) Surface Reflectance
+    eo:bands:
+      name: B7
+      common_name: swir22
+      gsd: 30
+      center_wavelength: 2.2
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_SR_B7.TIF
+    roles:
+      data
+      reflectance
+  qa_aerosol:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_SR_QA_AEROSOL.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Aerosol Quality Analysis Band
+    description: Collection 2 Level-2 Aerosol Quality Analysis Band Surface Reflectance
+    classification:bitfields:
+      name: fill
+      description: Corresponding pixels in L1 image bands are fill
+      offset: 0
+      length: 1
+      classes:
+        name: not_fill
+        description: L1 image band pixels are not fill
+        value: 0
+        name: fill
+        description: L1 image band pixels are fill
+        value: 1
+      name: retrieval
+      description: Valid aerosol retrieval
+      offset: 1
+      length: 1
+      classes:
+        name: not_valid
+        description: Aerosol retrieval is not valid
+        value: 0
+        name: valid
+        description: Aerosol retrieval is valid
+        value: 1
+      name: water
+      description: Water mask
+      offset: 2
+      length: 1
+      classes:
+        name: not_water
+        description: Not water
+        value: 0
+        name: water
+        description: Water
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 3
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 4
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: interpolated
+      description: Aerosol is interpolated
+      offset: 5
+      length: 1
+      classes:
+        name: not_interpolated
+        description: Aerosol is not interpolated
+        value: 0
+        name: interpolated
+        description: Aerosol is interpolated
+        value: 1
+      name: level
+      description: Aerosol level
+      offset: 6
+      length: 2
+      classes:
+        name: climatology
+        description: No aerosol correction applied
+        value: 0
+        name: low
+        description: Low aerosol level
+        value: 1
+        name: medium
+        description: Medium aerosol level
+        value: 2
+        name: high
+        description: High aerosol level
+        value: 3
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_SR_QA_AEROSOL.TIF
+    roles:
+      metadata
+      data-mask
+      water-mask
+  qa_pixel:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_QA_PIXEL.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Pixel Quality Assessment Band
+    description: Collection 2 Level-2 Pixel Quality Assessment Band Surface Reflectance
+    classification:bitfields:
+      name: fill
+      description: Corresponding pixels in L1 image bands are fill
+      offset: 0
+      length: 1
+      classes:
+        name: not_fill
+        description: L1 image band pixels are not fill
+        value: 0
+        name: fill
+        description: L1 image band pixels are fill
+        value: 1
+      name: dilated
+      description: Dilated cloud
+      offset: 1
+      length: 1
+      classes:
+        name: not_dilated
+        description: Cloud is not dilated or no cloud
+        value: 0
+        name: dilated
+        description: Cloud dilation
+        value: 1
+      name: cirrus
+      description: Cirrus mask
+      offset: 2
+      length: 1
+      classes:
+        name: not_cirrus
+        description: No confidence level set or low confidence cirrus
+        value: 0
+        name: cirrus
+        description: High confidence cirrus
+        value: 1
+      name: cloud
+      description: Cloud mask
+      offset: 3
+      length: 1
+      classes:
+        name: not_cloud
+        description: Cloud confidence is not high
+        value: 0
+        name: cloud
+        description: High confidence cloud
+        value: 1
+      name: shadow
+      description: Cloud shadow mask
+      offset: 4
+      length: 1
+      classes:
+        name: not_shadow
+        description: Cloud shadow confidence is not high
+        value: 0
+        name: shadow
+        description: High confidence cloud shadow
+        value: 1
+      name: snow
+      description: Snow/Ice mask
+      offset: 5
+      length: 1
+      classes:
+        name: not_snow
+        description: Snow/Ice confidence is not high
+        value: 0
+        name: snow
+        description: High confidence snow cover
+        value: 1
+      name: clear
+      description: Cloud or dilated cloud bits set
+      offset: 6
+      length: 1
+      classes:
+        name: not_clear
+        description: Cloud or dilated cloud bits are set
+        value: 0
+        name: clear
+        description: Cloud and dilated cloud bits are not set
+        value: 1
+      name: water
+      description: Water mask
+      offset: 7
+      length: 1
+      classes:
+        name: not_water
+        description: Land or cloud
+        value: 0
+        name: water
+        description: Water
+        value: 1
+      name: cloud_confidence
+      description: Cloud confidence levels
+      offset: 8
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence cloud
+        value: 1
+        name: medium
+        description: Medium confidence cloud
+        value: 2
+        name: high
+        description: High confidence cloud
+        value: 3
+      name: shadow_confidence
+      description: Cloud shadow confidence levels
+      offset: 10
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence cloud shadow
+        value: 1
+        name: reserved
+        description: Reserved - value not used
+        value: 2
+        name: high
+        description: High confidence cloud shadow
+        value: 3
+      name: snow_confidence
+      description: Snow/Ice confidence levels
+      offset: 12
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence snow/ice
+        value: 1
+        name: reserved
+        description: Reserved - value not used
+        value: 2
+        name: high
+        description: High confidence snow/ice
+        value: 3
+      name: cirrus_confidence
+      description: Cirrus confidence levels
+      offset: 14
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence cirrus
+        value: 1
+        name: reserved
+        description: Reserved - value not used
+        value: 2
+        name: high
+        description: High confidence cirrus
+        value: 3
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_QA_PIXEL.TIF
+    roles:
+      cloud
+      cloud-shadow
+      snow-ice
+      water-mask
+  qa_radsat:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_QA_RADSAT.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Radiometric Saturation Quality Assessment Band
+    description: Collection 2 Level-2 Radiometric Saturation Quality Assessment Band Surface Reflectance
+    classification:bitfields:
+      name: band1
+      description: Band 1 radiometric saturation
+      offset: 0
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 1 is not saturated
+        value: 0
+        name: saturated
+        description: Band 1 is saturated
+        value: 1
+      name: band2
+      description: Band 2 radiometric saturation
+      offset: 1
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 2 is not saturated
+        value: 0
+        name: saturated
+        description: Band 2 is saturated
+        value: 1
+      name: band3
+      description: Band 3 radiometric saturation
+      offset: 2
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 3 is not saturated
+        value: 0
+        name: saturated
+        description: Band 3 is saturated
+        value: 1
+      name: band4
+      description: Band 4 radiometric saturation
+      offset: 3
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 4 is not saturated
+        value: 0
+        name: saturated
+        description: Band 4 is saturated
+        value: 1
+      name: band5
+      description: Band 5 radiometric saturation
+      offset: 4
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 5 is not saturated
+        value: 0
+        name: saturated
+        description: Band 5 is saturated
+        value: 1
+      name: band6
+      description: Band 6 radiometric saturation
+      offset: 5
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 6 is not saturated
+        value: 0
+        name: saturated
+        description: Band 6 is saturated
+        value: 1
+      name: band7
+      description: Band 7 radiometric saturation
+      offset: 6
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 7 is not saturated
+        value: 0
+        name: saturated
+        description: Band 7 is saturated
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 7
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: band9
+      description: Band 9 radiometric saturation
+      offset: 8
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 9 is not saturated
+        value: 0
+        name: saturated
+        description: Band 9 is saturated
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 9
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 10
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: occlusion
+      description: Terrain not visible from sensor due to intervening terrain
+      offset: 11
+      length: 1
+      classes:
+        name: not_occluded
+        description: Terrain is not occluded
+        value: 0
+        name: occluded
+        description: Terrain is occluded
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 12
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 13
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 14
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 15
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_QA_RADSAT.TIF
+    roles:
+      saturation
+  ANG.txt:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_ANG.txt
+    type: text/plain
+    title: Angle Coefficients File
+    description: Collection 2 Level-2 Angle Coefficients File (ANG)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_ANG.txt
+    roles:
+      metadata
+  MTL.txt:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_MTL.txt
+    type: text/plain
+    title: Product Metadata File
+    description: Collection 2 Level-2 Product Metadata File (MTL)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_MTL.txt
+    roles:
+      metadata
+  MTL.xml:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_MTL.xml
+    type: application/xml
+    title: Product Metadata File (xml)
+    description: Collection 2 Level-2 Product Metadata File (xml)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC09_L2SP_154033_20240916_20240917_02_T1/LC09_L2SP_154033_20240916_20240917_02_T1_MTL.xml
+    roles:
+      metadata
+bbox:
+  67.06124230353011
+  37.84166069732959
+  69.6784709396976
+  39.95152224554161
+stac_extensions:
+  https://landsat.usgs.gov/stac/landsat-extension/v1.1.1/schema.json
+  https://stac-extensions.github.io/view/v1.0.0/schema.json
+  https://stac-extensions.github.io/projection/v1.0.0/schema.json
+  https://stac-extensions.github.io/eo/v1.0.0/schema.json
+  https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json
+  https://stac-extensions.github.io/storage/v1.0.0/schema.json
+  https://stac-extensions.github.io/accuracy/v1.0.0/schema.json
+  https://stac-extensions.github.io/card4l/v0.1.0/optical/schema.json
+  https://stac-extensions.github.io/classification/v1.0.0/schema.json
+collection: landsat-c2l2-sr
+description: Landsat Collection 2 Level-2 Surface Reflectance Producttype: Feature
+stac_version: 1.0.0
+id: LC09_L2SP_153033_20240909_20240910_02_T1_SR
+properties:
+  datetime: 2024-09-09T05:59:05.874800Z
+  eo:cloud_cover: 70.58
+  view:sun_azimuth: 147.23148948
+  view:sun_elevation: 51.81308759
+  platform: LANDSAT_9
+  instruments:
+    OLI
+    TIRS
+  view:off_nadir: 0
+  landsat:cloud_cover_land: 70.58
+  landsat:wrs_type: 2
+  landsat:wrs_path: 153
+  landsat:wrs_row: 033
+  landsat:scene_id: LC91530332024253LGN01
+  landsat:collection_category: T1
+  landsat:collection_number: 02
+  landsat:correction: L2SP
+  accuracy:geometric_x_bias: 0
+  accuracy:geometric_y_bias: 0
+  accuracy:geometric_x_stddev: 5.768
+  accuracy:geometric_y_stddev: 5.235
+  accuracy:geometric_rmse: 7.79
+  proj:epsg: 32642
+  proj:shape:
+    7811
+    7681
+  proj:transform:
+    30
+    0
+    463185
+    0
+    -30
+    4423215
+  card4l:specification: SR
+  card4l:specification_version: 5.0
+  created: 2024-09-10T11:55:11.918Z
+  updated: 2024-09-10T11:55:11.918Z
+geometry:
+  type: Polygon
+  coordinates:
+    [[69.1119763913533, 39.95172328605048], [68.60882549814269, 38.2334083308488], [70.67302161063118, 37.84282423012691], [71.22646617676133, 39.55958610134844], [69.1119763913533, 39.95172328605048]]
+links:
+  rel: self
+  href: https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC09_L2SP_153033_20240909_20240910_02_T1_SR
+  rel: parent
+  href: https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr
+  rel: collection
+  href: https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr
+  rel: root
+  href: https://landsatlook.usgs.gov/stac-server
+  type: application/json
+  title: STAC API
+assets:
+  thumbnail:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_thumb_small.jpeg
+    type: image/jpeg
+    title: Thumbnail image
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_thumb_small.jpeg
+    roles:
+      thumbnail
+  reduced_resolution_browse:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_thumb_large.jpeg
+    type: image/jpeg
+    title: Reduced resolution browse image
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_thumb_large.jpeg
+    roles:
+      overview
+  index:
+    href: https://landsatlook.usgs.gov/stac-browser/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1
+    type: text/html
+    title: HTML index page
+    roles:
+      metadata
+  MTL.json:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_MTL.json
+    type: application/json
+    title: Product Metadata File (json)
+    description: Collection 2 Level-2 Product Metadata File (json)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_MTL.json
+    roles:
+      metadata
+  coastal:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_SR_B1.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Coastal/Aerosol Band (B1)
+    description: Collection 2 Level-2 Coastal/Aerosol Band (B1) Surface Reflectance
+    eo:bands:
+      name: B1
+      common_name: coastal
+      gsd: 30
+      center_wavelength: 0.44
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_SR_B1.TIF
+    roles:
+      data
+  blue:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_SR_B2.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Blue Band (B2)
+    description: Collection 2 Level-2 Blue Band (B2) Surface Reflectance
+    eo:bands:
+      name: B2
+      common_name: blue
+      gsd: 30
+      center_wavelength: 0.48
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_SR_B2.TIF
+    roles:
+      data
+  green:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_SR_B3.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Green Band (B3)
+    description: Collection 2 Level-2 Green Band (B3) Surface Reflectance
+    eo:bands:
+      name: B3
+      common_name: green
+      gsd: 30
+      center_wavelength: 0.56
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_SR_B3.TIF
+    roles:
+      data
+  red:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_SR_B4.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Red Band (B4)
+    description: Collection 2 Level-2 Red Band (B4) Surface Reflectance
+    eo:bands:
+      name: B4
+      common_name: red
+      gsd: 30
+      center_wavelength: 0.65
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_SR_B4.TIF
+    roles:
+      data
+  nir08:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_SR_B5.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Near Infrared Band 0.8 (B5)
+    description: Collection 2 Level-2 Near Infrared Band 0.8 (B5) Surface Reflectance
+    eo:bands:
+      name: B5
+      common_name: nir08
+      gsd: 30
+      center_wavelength: 0.86
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_SR_B5.TIF
+    roles:
+      data
+      reflectance
+  swir16:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_SR_B6.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Short-wave Infrared Band 1.6 (B6)
+    description: Collection 2 Level-2 Short-wave Infrared Band 1.6 (B6) Surface Reflectance
+    eo:bands:
+      name: B6
+      common_name: swir16
+      gsd: 30
+      center_wavelength: 1.6
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_SR_B6.TIF
+    roles:
+      data
+      reflectance
+  swir22:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_SR_B7.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Short-wave Infrared Band 2.2 (B7)
+    description: Collection 2 Level-2 Short-wave Infrared Band 2.2 (B7) Surface Reflectance
+    eo:bands:
+      name: B7
+      common_name: swir22
+      gsd: 30
+      center_wavelength: 2.2
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_SR_B7.TIF
+    roles:
+      data
+      reflectance
+  qa_aerosol:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_SR_QA_AEROSOL.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Aerosol Quality Analysis Band
+    description: Collection 2 Level-2 Aerosol Quality Analysis Band Surface Reflectance
+    classification:bitfields:
+      name: fill
+      description: Corresponding pixels in L1 image bands are fill
+      offset: 0
+      length: 1
+      classes:
+        name: not_fill
+        description: L1 image band pixels are not fill
+        value: 0
+        name: fill
+        description: L1 image band pixels are fill
+        value: 1
+      name: retrieval
+      description: Valid aerosol retrieval
+      offset: 1
+      length: 1
+      classes:
+        name: not_valid
+        description: Aerosol retrieval is not valid
+        value: 0
+        name: valid
+        description: Aerosol retrieval is valid
+        value: 1
+      name: water
+      description: Water mask
+      offset: 2
+      length: 1
+      classes:
+        name: not_water
+        description: Not water
+        value: 0
+        name: water
+        description: Water
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 3
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 4
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: interpolated
+      description: Aerosol is interpolated
+      offset: 5
+      length: 1
+      classes:
+        name: not_interpolated
+        description: Aerosol is not interpolated
+        value: 0
+        name: interpolated
+        description: Aerosol is interpolated
+        value: 1
+      name: level
+      description: Aerosol level
+      offset: 6
+      length: 2
+      classes:
+        name: climatology
+        description: No aerosol correction applied
+        value: 0
+        name: low
+        description: Low aerosol level
+        value: 1
+        name: medium
+        description: Medium aerosol level
+        value: 2
+        name: high
+        description: High aerosol level
+        value: 3
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_SR_QA_AEROSOL.TIF
+    roles:
+      metadata
+      data-mask
+      water-mask
+  qa_pixel:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_QA_PIXEL.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Pixel Quality Assessment Band
+    description: Collection 2 Level-2 Pixel Quality Assessment Band Surface Reflectance
+    classification:bitfields:
+      name: fill
+      description: Corresponding pixels in L1 image bands are fill
+      offset: 0
+      length: 1
+      classes:
+        name: not_fill
+        description: L1 image band pixels are not fill
+        value: 0
+        name: fill
+        description: L1 image band pixels are fill
+        value: 1
+      name: dilated
+      description: Dilated cloud
+      offset: 1
+      length: 1
+      classes:
+        name: not_dilated
+        description: Cloud is not dilated or no cloud
+        value: 0
+        name: dilated
+        description: Cloud dilation
+        value: 1
+      name: cirrus
+      description: Cirrus mask
+      offset: 2
+      length: 1
+      classes:
+        name: not_cirrus
+        description: No confidence level set or low confidence cirrus
+        value: 0
+        name: cirrus
+        description: High confidence cirrus
+        value: 1
+      name: cloud
+      description: Cloud mask
+      offset: 3
+      length: 1
+      classes:
+        name: not_cloud
+        description: Cloud confidence is not high
+        value: 0
+        name: cloud
+        description: High confidence cloud
+        value: 1
+      name: shadow
+      description: Cloud shadow mask
+      offset: 4
+      length: 1
+      classes:
+        name: not_shadow
+        description: Cloud shadow confidence is not high
+        value: 0
+        name: shadow
+        description: High confidence cloud shadow
+        value: 1
+      name: snow
+      description: Snow/Ice mask
+      offset: 5
+      length: 1
+      classes:
+        name: not_snow
+        description: Snow/Ice confidence is not high
+        value: 0
+        name: snow
+        description: High confidence snow cover
+        value: 1
+      name: clear
+      description: Cloud or dilated cloud bits set
+      offset: 6
+      length: 1
+      classes:
+        name: not_clear
+        description: Cloud or dilated cloud bits are set
+        value: 0
+        name: clear
+        description: Cloud and dilated cloud bits are not set
+        value: 1
+      name: water
+      description: Water mask
+      offset: 7
+      length: 1
+      classes:
+        name: not_water
+        description: Land or cloud
+        value: 0
+        name: water
+        description: Water
+        value: 1
+      name: cloud_confidence
+      description: Cloud confidence levels
+      offset: 8
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence cloud
+        value: 1
+        name: medium
+        description: Medium confidence cloud
+        value: 2
+        name: high
+        description: High confidence cloud
+        value: 3
+      name: shadow_confidence
+      description: Cloud shadow confidence levels
+      offset: 10
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence cloud shadow
+        value: 1
+        name: reserved
+        description: Reserved - value not used
+        value: 2
+        name: high
+        description: High confidence cloud shadow
+        value: 3
+      name: snow_confidence
+      description: Snow/Ice confidence levels
+      offset: 12
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence snow/ice
+        value: 1
+        name: reserved
+        description: Reserved - value not used
+        value: 2
+        name: high
+        description: High confidence snow/ice
+        value: 3
+      name: cirrus_confidence
+      description: Cirrus confidence levels
+      offset: 14
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence cirrus
+        value: 1
+        name: reserved
+        description: Reserved - value not used
+        value: 2
+        name: high
+        description: High confidence cirrus
+        value: 3
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_QA_PIXEL.TIF
+    roles:
+      cloud
+      cloud-shadow
+      snow-ice
+      water-mask
+  qa_radsat:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_QA_RADSAT.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Radiometric Saturation Quality Assessment Band
+    description: Collection 2 Level-2 Radiometric Saturation Quality Assessment Band Surface Reflectance
+    classification:bitfields:
+      name: band1
+      description: Band 1 radiometric saturation
+      offset: 0
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 1 is not saturated
+        value: 0
+        name: saturated
+        description: Band 1 is saturated
+        value: 1
+      name: band2
+      description: Band 2 radiometric saturation
+      offset: 1
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 2 is not saturated
+        value: 0
+        name: saturated
+        description: Band 2 is saturated
+        value: 1
+      name: band3
+      description: Band 3 radiometric saturation
+      offset: 2
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 3 is not saturated
+        value: 0
+        name: saturated
+        description: Band 3 is saturated
+        value: 1
+      name: band4
+      description: Band 4 radiometric saturation
+      offset: 3
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 4 is not saturated
+        value: 0
+        name: saturated
+        description: Band 4 is saturated
+        value: 1
+      name: band5
+      description: Band 5 radiometric saturation
+      offset: 4
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 5 is not saturated
+        value: 0
+        name: saturated
+        description: Band 5 is saturated
+        value: 1
+      name: band6
+      description: Band 6 radiometric saturation
+      offset: 5
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 6 is not saturated
+        value: 0
+        name: saturated
+        description: Band 6 is saturated
+        value: 1
+      name: band7
+      description: Band 7 radiometric saturation
+      offset: 6
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 7 is not saturated
+        value: 0
+        name: saturated
+        description: Band 7 is saturated
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 7
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: band9
+      description: Band 9 radiometric saturation
+      offset: 8
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 9 is not saturated
+        value: 0
+        name: saturated
+        description: Band 9 is saturated
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 9
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 10
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: occlusion
+      description: Terrain not visible from sensor due to intervening terrain
+      offset: 11
+      length: 1
+      classes:
+        name: not_occluded
+        description: Terrain is not occluded
+        value: 0
+        name: occluded
+        description: Terrain is occluded
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 12
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 13
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 14
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 15
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_QA_RADSAT.TIF
+    roles:
+      saturation
+  ANG.txt:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_ANG.txt
+    type: text/plain
+    title: Angle Coefficients File
+    description: Collection 2 Level-2 Angle Coefficients File (ANG)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_ANG.txt
+    roles:
+      metadata
+  MTL.txt:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_MTL.txt
+    type: text/plain
+    title: Product Metadata File
+    description: Collection 2 Level-2 Product Metadata File (MTL)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_MTL.txt
+    roles:
+      metadata
+  MTL.xml:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_MTL.xml
+    type: application/xml
+    title: Product Metadata File (xml)
+    description: Collection 2 Level-2 Product Metadata File (xml)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC09_L2SP_153033_20240909_20240910_02_T1/LC09_L2SP_153033_20240909_20240910_02_T1_MTL.xml
+    roles:
+      metadata
+bbox:
+  68.60882549814269
+  37.84282423012691
+  71.22646617676133
+  39.95172328605048
+stac_extensions:
+  https://landsat.usgs.gov/stac/landsat-extension/v1.1.1/schema.json
+  https://stac-extensions.github.io/view/v1.0.0/schema.json
+  https://stac-extensions.github.io/projection/v1.0.0/schema.json
+  https://stac-extensions.github.io/eo/v1.0.0/schema.json
+  https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json
+  https://stac-extensions.github.io/storage/v1.0.0/schema.json
+  https://stac-extensions.github.io/accuracy/v1.0.0/schema.json
+  https://stac-extensions.github.io/card4l/v0.1.0/optical/schema.json
+  https://stac-extensions.github.io/classification/v1.0.0/schema.json
+collection: landsat-c2l2-sr
+description: Landsat Collection 2 Level-2 Surface Reflectance Producttype: Feature
+stac_version: 1.0.0
+id: LC08_L2SP_154033_20240908_20240914_02_T1_SR
+properties:
+  datetime: 2024-09-08T06:05:24.431367Z
+  eo:cloud_cover: 10.08
+  view:sun_azimuth: 146.87756871
+  view:sun_elevation: 52.12604539
+  platform: LANDSAT_8
+  instruments:
+    OLI
+    TIRS
+  view:off_nadir: 0
+  landsat:cloud_cover_land: 10.08
+  landsat:wrs_type: 2
+  landsat:wrs_path: 154
+  landsat:wrs_row: 033
+  landsat:scene_id: LC81540332024252LGN00
+  landsat:collection_category: T1
+  landsat:collection_number: 02
+  landsat:correction: L2SP
+  accuracy:geometric_x_bias: 0
+  accuracy:geometric_y_bias: 0
+  accuracy:geometric_x_stddev: 4.2
+  accuracy:geometric_y_stddev: 3.262
+  accuracy:geometric_rmse: 5.318
+  proj:epsg: 32642
+  proj:shape:
+    7891
+    7771
+  proj:transform:
+    30
+    0
+    326985
+    0
+    -30
+    4424115
+  card4l:specification: SR
+  card4l:specification_version: 5.0
+  created: 2024-09-14T06:30:39.179Z
+  updated: 2024-09-14T06:30:39.179Z
+geometry:
+  type: Polygon
+  coordinates:
+    [[67.55155408808156, 39.953539724401104], [67.04885143034947, 38.235142704461495], [69.10973527291969, 37.8427616114353], [69.65927543761626, 39.560397295869926], [67.55155408808156, 39.953539724401104]]
+links:
+  rel: self
+  href: https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_154033_20240908_20240914_02_T1_SR
+  rel: parent
+  href: https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr
+  rel: collection
+  href: https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr
+  rel: root
+  href: https://landsatlook.usgs.gov/stac-server
+  type: application/json
+  title: STAC API
+assets:
+  thumbnail:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_thumb_small.jpeg
+    type: image/jpeg
+    title: Thumbnail image
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_thumb_small.jpeg
+    roles:
+      thumbnail
+  reduced_resolution_browse:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_thumb_large.jpeg
+    type: image/jpeg
+    title: Reduced resolution browse image
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_thumb_large.jpeg
+    roles:
+      overview
+  index:
+    href: https://landsatlook.usgs.gov/stac-browser/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1
+    type: text/html
+    title: HTML index page
+    roles:
+      metadata
+  MTL.json:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_MTL.json
+    type: application/json
+    title: Product Metadata File (json)
+    description: Collection 2 Level-2 Product Metadata File (json)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_MTL.json
+    roles:
+      metadata
+  coastal:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_SR_B1.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Coastal/Aerosol Band (B1)
+    description: Collection 2 Level-2 Coastal/Aerosol Band (B1) Surface Reflectance
+    eo:bands:
+      name: B1
+      common_name: coastal
+      gsd: 30
+      center_wavelength: 0.44
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_SR_B1.TIF
+    roles:
+      data
+  blue:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_SR_B2.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Blue Band (B2)
+    description: Collection 2 Level-2 Blue Band (B2) Surface Reflectance
+    eo:bands:
+      name: B2
+      common_name: blue
+      gsd: 30
+      center_wavelength: 0.48
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_SR_B2.TIF
+    roles:
+      data
+  green:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_SR_B3.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Green Band (B3)
+    description: Collection 2 Level-2 Green Band (B3) Surface Reflectance
+    eo:bands:
+      name: B3
+      common_name: green
+      gsd: 30
+      center_wavelength: 0.56
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_SR_B3.TIF
+    roles:
+      data
+  red:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_SR_B4.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Red Band (B4)
+    description: Collection 2 Level-2 Red Band (B4) Surface Reflectance
+    eo:bands:
+      name: B4
+      common_name: red
+      gsd: 30
+      center_wavelength: 0.65
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_SR_B4.TIF
+    roles:
+      data
+  nir08:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_SR_B5.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Near Infrared Band 0.8 (B5)
+    description: Collection 2 Level-2 Near Infrared Band 0.8 (B5) Surface Reflectance
+    eo:bands:
+      name: B5
+      common_name: nir08
+      gsd: 30
+      center_wavelength: 0.86
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_SR_B5.TIF
+    roles:
+      data
+      reflectance
+  swir16:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_SR_B6.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Short-wave Infrared Band 1.6 (B6)
+    description: Collection 2 Level-2 Short-wave Infrared Band 1.6 (B6) Surface Reflectance
+    eo:bands:
+      name: B6
+      common_name: swir16
+      gsd: 30
+      center_wavelength: 1.6
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_SR_B6.TIF
+    roles:
+      data
+      reflectance
+  swir22:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_SR_B7.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Short-wave Infrared Band 2.2 (B7)
+    description: Collection 2 Level-2 Short-wave Infrared Band 2.2 (B7) Surface Reflectance
+    eo:bands:
+      name: B7
+      common_name: swir22
+      gsd: 30
+      center_wavelength: 2.2
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_SR_B7.TIF
+    roles:
+      data
+      reflectance
+  qa_aerosol:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_SR_QA_AEROSOL.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Aerosol Quality Analysis Band
+    description: Collection 2 Level-2 Aerosol Quality Analysis Band Surface Reflectance
+    classification:bitfields:
+      name: fill
+      description: Corresponding pixels in L1 image bands are fill
+      offset: 0
+      length: 1
+      classes:
+        name: not_fill
+        description: L1 image band pixels are not fill
+        value: 0
+        name: fill
+        description: L1 image band pixels are fill
+        value: 1
+      name: retrieval
+      description: Valid aerosol retrieval
+      offset: 1
+      length: 1
+      classes:
+        name: not_valid
+        description: Aerosol retrieval is not valid
+        value: 0
+        name: valid
+        description: Aerosol retrieval is valid
+        value: 1
+      name: water
+      description: Water mask
+      offset: 2
+      length: 1
+      classes:
+        name: not_water
+        description: Not water
+        value: 0
+        name: water
+        description: Water
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 3
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 4
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: interpolated
+      description: Aerosol is interpolated
+      offset: 5
+      length: 1
+      classes:
+        name: not_interpolated
+        description: Aerosol is not interpolated
+        value: 0
+        name: interpolated
+        description: Aerosol is interpolated
+        value: 1
+      name: level
+      description: Aerosol level
+      offset: 6
+      length: 2
+      classes:
+        name: climatology
+        description: No aerosol correction applied
+        value: 0
+        name: low
+        description: Low aerosol level
+        value: 1
+        name: medium
+        description: Medium aerosol level
+        value: 2
+        name: high
+        description: High aerosol level
+        value: 3
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_SR_QA_AEROSOL.TIF
+    roles:
+      metadata
+      data-mask
+      water-mask
+  qa_pixel:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_QA_PIXEL.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Pixel Quality Assessment Band
+    description: Collection 2 Level-2 Pixel Quality Assessment Band Surface Reflectance
+    classification:bitfields:
+      name: fill
+      description: Corresponding pixels in L1 image bands are fill
+      offset: 0
+      length: 1
+      classes:
+        name: not_fill
+        description: L1 image band pixels are not fill
+        value: 0
+        name: fill
+        description: L1 image band pixels are fill
+        value: 1
+      name: dilated
+      description: Dilated cloud
+      offset: 1
+      length: 1
+      classes:
+        name: not_dilated
+        description: Cloud is not dilated or no cloud
+        value: 0
+        name: dilated
+        description: Cloud dilation
+        value: 1
+      name: cirrus
+      description: Cirrus mask
+      offset: 2
+      length: 1
+      classes:
+        name: not_cirrus
+        description: No confidence level set or low confidence cirrus
+        value: 0
+        name: cirrus
+        description: High confidence cirrus
+        value: 1
+      name: cloud
+      description: Cloud mask
+      offset: 3
+      length: 1
+      classes:
+        name: not_cloud
+        description: Cloud confidence is not high
+        value: 0
+        name: cloud
+        description: High confidence cloud
+        value: 1
+      name: shadow
+      description: Cloud shadow mask
+      offset: 4
+      length: 1
+      classes:
+        name: not_shadow
+        description: Cloud shadow confidence is not high
+        value: 0
+        name: shadow
+        description: High confidence cloud shadow
+        value: 1
+      name: snow
+      description: Snow/Ice mask
+      offset: 5
+      length: 1
+      classes:
+        name: not_snow
+        description: Snow/Ice confidence is not high
+        value: 0
+        name: snow
+        description: High confidence snow cover
+        value: 1
+      name: clear
+      description: Cloud or dilated cloud bits set
+      offset: 6
+      length: 1
+      classes:
+        name: not_clear
+        description: Cloud or dilated cloud bits are set
+        value: 0
+        name: clear
+        description: Cloud and dilated cloud bits are not set
+        value: 1
+      name: water
+      description: Water mask
+      offset: 7
+      length: 1
+      classes:
+        name: not_water
+        description: Land or cloud
+        value: 0
+        name: water
+        description: Water
+        value: 1
+      name: cloud_confidence
+      description: Cloud confidence levels
+      offset: 8
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence cloud
+        value: 1
+        name: medium
+        description: Medium confidence cloud
+        value: 2
+        name: high
+        description: High confidence cloud
+        value: 3
+      name: shadow_confidence
+      description: Cloud shadow confidence levels
+      offset: 10
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence cloud shadow
+        value: 1
+        name: reserved
+        description: Reserved - value not used
+        value: 2
+        name: high
+        description: High confidence cloud shadow
+        value: 3
+      name: snow_confidence
+      description: Snow/Ice confidence levels
+      offset: 12
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence snow/ice
+        value: 1
+        name: reserved
+        description: Reserved - value not used
+        value: 2
+        name: high
+        description: High confidence snow/ice
+        value: 3
+      name: cirrus_confidence
+      description: Cirrus confidence levels
+      offset: 14
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence cirrus
+        value: 1
+        name: reserved
+        description: Reserved - value not used
+        value: 2
+        name: high
+        description: High confidence cirrus
+        value: 3
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_QA_PIXEL.TIF
+    roles:
+      cloud
+      cloud-shadow
+      snow-ice
+      water-mask
+  qa_radsat:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_QA_RADSAT.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Radiometric Saturation Quality Assessment Band
+    description: Collection 2 Level-2 Radiometric Saturation Quality Assessment Band Surface Reflectance
+    classification:bitfields:
+      name: band1
+      description: Band 1 radiometric saturation
+      offset: 0
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 1 is not saturated
+        value: 0
+        name: saturated
+        description: Band 1 is saturated
+        value: 1
+      name: band2
+      description: Band 2 radiometric saturation
+      offset: 1
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 2 is not saturated
+        value: 0
+        name: saturated
+        description: Band 2 is saturated
+        value: 1
+      name: band3
+      description: Band 3 radiometric saturation
+      offset: 2
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 3 is not saturated
+        value: 0
+        name: saturated
+        description: Band 3 is saturated
+        value: 1
+      name: band4
+      description: Band 4 radiometric saturation
+      offset: 3
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 4 is not saturated
+        value: 0
+        name: saturated
+        description: Band 4 is saturated
+        value: 1
+      name: band5
+      description: Band 5 radiometric saturation
+      offset: 4
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 5 is not saturated
+        value: 0
+        name: saturated
+        description: Band 5 is saturated
+        value: 1
+      name: band6
+      description: Band 6 radiometric saturation
+      offset: 5
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 6 is not saturated
+        value: 0
+        name: saturated
+        description: Band 6 is saturated
+        value: 1
+      name: band7
+      description: Band 7 radiometric saturation
+      offset: 6
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 7 is not saturated
+        value: 0
+        name: saturated
+        description: Band 7 is saturated
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 7
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: band9
+      description: Band 9 radiometric saturation
+      offset: 8
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 9 is not saturated
+        value: 0
+        name: saturated
+        description: Band 9 is saturated
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 9
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 10
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: occlusion
+      description: Terrain not visible from sensor due to intervening terrain
+      offset: 11
+      length: 1
+      classes:
+        name: not_occluded
+        description: Terrain is not occluded
+        value: 0
+        name: occluded
+        description: Terrain is occluded
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 12
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 13
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 14
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 15
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_QA_RADSAT.TIF
+    roles:
+      saturation
+  ANG.txt:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_ANG.txt
+    type: text/plain
+    title: Angle Coefficients File
+    description: Collection 2 Level-2 Angle Coefficients File (ANG)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_ANG.txt
+    roles:
+      metadata
+  MTL.txt:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_MTL.txt
+    type: text/plain
+    title: Product Metadata File
+    description: Collection 2 Level-2 Product Metadata File (MTL)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_MTL.txt
+    roles:
+      metadata
+  MTL.xml:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_MTL.xml
+    type: application/xml
+    title: Product Metadata File (xml)
+    description: Collection 2 Level-2 Product Metadata File (xml)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/154/033/LC08_L2SP_154033_20240908_20240914_02_T1/LC08_L2SP_154033_20240908_20240914_02_T1_MTL.xml
+    roles:
+      metadata
+bbox:
+  67.04885143034947
+  37.8427616114353
+  69.65927543761626
+  39.953539724401104
+stac_extensions:
+  https://landsat.usgs.gov/stac/landsat-extension/v1.1.1/schema.json
+  https://stac-extensions.github.io/view/v1.0.0/schema.json
+  https://stac-extensions.github.io/projection/v1.0.0/schema.json
+  https://stac-extensions.github.io/eo/v1.0.0/schema.json
+  https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json
+  https://stac-extensions.github.io/storage/v1.0.0/schema.json
+  https://stac-extensions.github.io/accuracy/v1.0.0/schema.json
+  https://stac-extensions.github.io/card4l/v0.1.0/optical/schema.json
+  https://stac-extensions.github.io/classification/v1.0.0/schema.json
+collection: landsat-c2l2-sr
+description: Landsat Collection 2 Level-2 Surface Reflectance Producttype: Feature
+stac_version: 1.0.0
+id: LC08_L2SP_153033_20240901_20240906_02_T1_SR
+properties:
+  datetime: 2024-09-01T05:59:09.258347Z
+  eo:cloud_cover: 0.45
+  view:sun_azimuth: 144.0753469
+  view:sun_elevation: 54.1911587
+  platform: LANDSAT_8
+  instruments:
+    OLI
+    TIRS
+  view:off_nadir: 0
+  landsat:cloud_cover_land: 0.45
+  landsat:wrs_type: 2
+  landsat:wrs_path: 153
+  landsat:wrs_row: 033
+  landsat:scene_id: LC81530332024245LGN00
+  landsat:collection_category: T1
+  landsat:collection_number: 02
+  landsat:correction: L2SP
+  accuracy:geometric_x_bias: 0
+  accuracy:geometric_y_bias: 0
+  accuracy:geometric_x_stddev: 4.307
+  accuracy:geometric_y_stddev: 3.495
+  accuracy:geometric_rmse: 5.547
+  proj:epsg: 32642
+  proj:shape:
+    7811
+    7681
+  proj:transform:
+    30
+    0
+    463185
+    0
+    -30
+    4423215
+  card4l:specification: SR
+  card4l:specification_version: 5.0
+  created: 2024-09-06T06:53:27.892Z
+  updated: 2024-09-06T06:53:27.892Z
+geometry:
+  type: Polygon
+  coordinates:
+    [[69.10284867611847, 39.95416440870516], [68.59989996114923, 38.23581161680313], [70.65668616224067, 37.84413668918549], [71.21044837092138, 39.560973105279245], [69.10284867611847, 39.95416440870516]]
+links:
+  rel: self
+  href: https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_153033_20240901_20240906_02_T1_SR
+  rel: parent
+  href: https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr
+  rel: collection
+  href: https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr
+  rel: root
+  href: https://landsatlook.usgs.gov/stac-server
+  type: application/json
+  title: STAC API
+assets:
+  thumbnail:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_thumb_small.jpeg
+    type: image/jpeg
+    title: Thumbnail image
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_thumb_small.jpeg
+    roles:
+      thumbnail
+  reduced_resolution_browse:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_thumb_large.jpeg
+    type: image/jpeg
+    title: Reduced resolution browse image
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_thumb_large.jpeg
+    roles:
+      overview
+  index:
+    href: https://landsatlook.usgs.gov/stac-browser/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1
+    type: text/html
+    title: HTML index page
+    roles:
+      metadata
+  MTL.json:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_MTL.json
+    type: application/json
+    title: Product Metadata File (json)
+    description: Collection 2 Level-2 Product Metadata File (json)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_MTL.json
+    roles:
+      metadata
+  coastal:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_SR_B1.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Coastal/Aerosol Band (B1)
+    description: Collection 2 Level-2 Coastal/Aerosol Band (B1) Surface Reflectance
+    eo:bands:
+      name: B1
+      common_name: coastal
+      gsd: 30
+      center_wavelength: 0.44
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_SR_B1.TIF
+    roles:
+      data
+  blue:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_SR_B2.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Blue Band (B2)
+    description: Collection 2 Level-2 Blue Band (B2) Surface Reflectance
+    eo:bands:
+      name: B2
+      common_name: blue
+      gsd: 30
+      center_wavelength: 0.48
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_SR_B2.TIF
+    roles:
+      data
+  green:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_SR_B3.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Green Band (B3)
+    description: Collection 2 Level-2 Green Band (B3) Surface Reflectance
+    eo:bands:
+      name: B3
+      common_name: green
+      gsd: 30
+      center_wavelength: 0.56
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_SR_B3.TIF
+    roles:
+      data
+  red:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_SR_B4.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Red Band (B4)
+    description: Collection 2 Level-2 Red Band (B4) Surface Reflectance
+    eo:bands:
+      name: B4
+      common_name: red
+      gsd: 30
+      center_wavelength: 0.65
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_SR_B4.TIF
+    roles:
+      data
+  nir08:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_SR_B5.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Near Infrared Band 0.8 (B5)
+    description: Collection 2 Level-2 Near Infrared Band 0.8 (B5) Surface Reflectance
+    eo:bands:
+      name: B5
+      common_name: nir08
+      gsd: 30
+      center_wavelength: 0.86
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_SR_B5.TIF
+    roles:
+      data
+      reflectance
+  swir16:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_SR_B6.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Short-wave Infrared Band 1.6 (B6)
+    description: Collection 2 Level-2 Short-wave Infrared Band 1.6 (B6) Surface Reflectance
+    eo:bands:
+      name: B6
+      common_name: swir16
+      gsd: 30
+      center_wavelength: 1.6
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_SR_B6.TIF
+    roles:
+      data
+      reflectance
+  swir22:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_SR_B7.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Short-wave Infrared Band 2.2 (B7)
+    description: Collection 2 Level-2 Short-wave Infrared Band 2.2 (B7) Surface Reflectance
+    eo:bands:
+      name: B7
+      common_name: swir22
+      gsd: 30
+      center_wavelength: 2.2
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_SR_B7.TIF
+    roles:
+      data
+      reflectance
+  qa_aerosol:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_SR_QA_AEROSOL.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Aerosol Quality Analysis Band
+    description: Collection 2 Level-2 Aerosol Quality Analysis Band Surface Reflectance
+    classification:bitfields:
+      name: fill
+      description: Corresponding pixels in L1 image bands are fill
+      offset: 0
+      length: 1
+      classes:
+        name: not_fill
+        description: L1 image band pixels are not fill
+        value: 0
+        name: fill
+        description: L1 image band pixels are fill
+        value: 1
+      name: retrieval
+      description: Valid aerosol retrieval
+      offset: 1
+      length: 1
+      classes:
+        name: not_valid
+        description: Aerosol retrieval is not valid
+        value: 0
+        name: valid
+        description: Aerosol retrieval is valid
+        value: 1
+      name: water
+      description: Water mask
+      offset: 2
+      length: 1
+      classes:
+        name: not_water
+        description: Not water
+        value: 0
+        name: water
+        description: Water
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 3
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 4
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: interpolated
+      description: Aerosol is interpolated
+      offset: 5
+      length: 1
+      classes:
+        name: not_interpolated
+        description: Aerosol is not interpolated
+        value: 0
+        name: interpolated
+        description: Aerosol is interpolated
+        value: 1
+      name: level
+      description: Aerosol level
+      offset: 6
+      length: 2
+      classes:
+        name: climatology
+        description: No aerosol correction applied
+        value: 0
+        name: low
+        description: Low aerosol level
+        value: 1
+        name: medium
+        description: Medium aerosol level
+        value: 2
+        name: high
+        description: High aerosol level
+        value: 3
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_SR_QA_AEROSOL.TIF
+    roles:
+      metadata
+      data-mask
+      water-mask
+  qa_pixel:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_QA_PIXEL.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Pixel Quality Assessment Band
+    description: Collection 2 Level-2 Pixel Quality Assessment Band Surface Reflectance
+    classification:bitfields:
+      name: fill
+      description: Corresponding pixels in L1 image bands are fill
+      offset: 0
+      length: 1
+      classes:
+        name: not_fill
+        description: L1 image band pixels are not fill
+        value: 0
+        name: fill
+        description: L1 image band pixels are fill
+        value: 1
+      name: dilated
+      description: Dilated cloud
+      offset: 1
+      length: 1
+      classes:
+        name: not_dilated
+        description: Cloud is not dilated or no cloud
+        value: 0
+        name: dilated
+        description: Cloud dilation
+        value: 1
+      name: cirrus
+      description: Cirrus mask
+      offset: 2
+      length: 1
+      classes:
+        name: not_cirrus
+        description: No confidence level set or low confidence cirrus
+        value: 0
+        name: cirrus
+        description: High confidence cirrus
+        value: 1
+      name: cloud
+      description: Cloud mask
+      offset: 3
+      length: 1
+      classes:
+        name: not_cloud
+        description: Cloud confidence is not high
+        value: 0
+        name: cloud
+        description: High confidence cloud
+        value: 1
+      name: shadow
+      description: Cloud shadow mask
+      offset: 4
+      length: 1
+      classes:
+        name: not_shadow
+        description: Cloud shadow confidence is not high
+        value: 0
+        name: shadow
+        description: High confidence cloud shadow
+        value: 1
+      name: snow
+      description: Snow/Ice mask
+      offset: 5
+      length: 1
+      classes:
+        name: not_snow
+        description: Snow/Ice confidence is not high
+        value: 0
+        name: snow
+        description: High confidence snow cover
+        value: 1
+      name: clear
+      description: Cloud or dilated cloud bits set
+      offset: 6
+      length: 1
+      classes:
+        name: not_clear
+        description: Cloud or dilated cloud bits are set
+        value: 0
+        name: clear
+        description: Cloud and dilated cloud bits are not set
+        value: 1
+      name: water
+      description: Water mask
+      offset: 7
+      length: 1
+      classes:
+        name: not_water
+        description: Land or cloud
+        value: 0
+        name: water
+        description: Water
+        value: 1
+      name: cloud_confidence
+      description: Cloud confidence levels
+      offset: 8
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence cloud
+        value: 1
+        name: medium
+        description: Medium confidence cloud
+        value: 2
+        name: high
+        description: High confidence cloud
+        value: 3
+      name: shadow_confidence
+      description: Cloud shadow confidence levels
+      offset: 10
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence cloud shadow
+        value: 1
+        name: reserved
+        description: Reserved - value not used
+        value: 2
+        name: high
+        description: High confidence cloud shadow
+        value: 3
+      name: snow_confidence
+      description: Snow/Ice confidence levels
+      offset: 12
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence snow/ice
+        value: 1
+        name: reserved
+        description: Reserved - value not used
+        value: 2
+        name: high
+        description: High confidence snow/ice
+        value: 3
+      name: cirrus_confidence
+      description: Cirrus confidence levels
+      offset: 14
+      length: 2
+      classes:
+        name: not_set
+        description: No confidence level set
+        value: 0
+        name: low
+        description: Low confidence cirrus
+        value: 1
+        name: reserved
+        description: Reserved - value not used
+        value: 2
+        name: high
+        description: High confidence cirrus
+        value: 3
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_QA_PIXEL.TIF
+    roles:
+      cloud
+      cloud-shadow
+      snow-ice
+      water-mask
+  qa_radsat:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_QA_RADSAT.TIF
+    type: image/vnd.stac.geotiff; cloud-optimized=true
+    title: Radiometric Saturation Quality Assessment Band
+    description: Collection 2 Level-2 Radiometric Saturation Quality Assessment Band Surface Reflectance
+    classification:bitfields:
+      name: band1
+      description: Band 1 radiometric saturation
+      offset: 0
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 1 is not saturated
+        value: 0
+        name: saturated
+        description: Band 1 is saturated
+        value: 1
+      name: band2
+      description: Band 2 radiometric saturation
+      offset: 1
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 2 is not saturated
+        value: 0
+        name: saturated
+        description: Band 2 is saturated
+        value: 1
+      name: band3
+      description: Band 3 radiometric saturation
+      offset: 2
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 3 is not saturated
+        value: 0
+        name: saturated
+        description: Band 3 is saturated
+        value: 1
+      name: band4
+      description: Band 4 radiometric saturation
+      offset: 3
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 4 is not saturated
+        value: 0
+        name: saturated
+        description: Band 4 is saturated
+        value: 1
+      name: band5
+      description: Band 5 radiometric saturation
+      offset: 4
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 5 is not saturated
+        value: 0
+        name: saturated
+        description: Band 5 is saturated
+        value: 1
+      name: band6
+      description: Band 6 radiometric saturation
+      offset: 5
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 6 is not saturated
+        value: 0
+        name: saturated
+        description: Band 6 is saturated
+        value: 1
+      name: band7
+      description: Band 7 radiometric saturation
+      offset: 6
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 7 is not saturated
+        value: 0
+        name: saturated
+        description: Band 7 is saturated
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 7
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: band9
+      description: Band 9 radiometric saturation
+      offset: 8
+      length: 1
+      classes:
+        name: not_saturated
+        description: Band 9 is not saturated
+        value: 0
+        name: saturated
+        description: Band 9 is saturated
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 9
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 10
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: occlusion
+      description: Terrain not visible from sensor due to intervening terrain
+      offset: 11
+      length: 1
+      classes:
+        name: not_occluded
+        description: Terrain is not occluded
+        value: 0
+        name: occluded
+        description: Terrain is occluded
+        value: 1
+      name: unused
+      description: Unused bit
+      offset: 12
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 13
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 14
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+      name: unused
+      description: Unused bit
+      offset: 15
+      length: 1
+      classes:
+        name: unused
+        description: Unused bit
+        value: 0
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_QA_RADSAT.TIF
+    roles:
+      saturation
+  ANG.txt:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_ANG.txt
+    type: text/plain
+    title: Angle Coefficients File
+    description: Collection 2 Level-2 Angle Coefficients File (ANG)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_ANG.txt
+    roles:
+      metadata
+  MTL.txt:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_MTL.txt
+    type: text/plain
+    title: Product Metadata File
+    description: Collection 2 Level-2 Product Metadata File (MTL)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_MTL.txt
+    roles:
+      metadata
+  MTL.xml:
+    href: https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_MTL.xml
+    type: application/xml
+    title: Product Metadata File (xml)
+    description: Collection 2 Level-2 Product Metadata File (xml)
+    alternate:
+      s3:
+        storage:platform: AWS
+        storage:requester_pays: True
+        href: s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2024/153/033/LC08_L2SP_153033_20240901_20240906_02_T1/LC08_L2SP_153033_20240901_20240906_02_T1_MTL.xml
+    roles:
+      metadata
+bbox:
+  68.59989996114923
+  37.84413668918549
+  71.21044837092138
+  39.95416440870516
+stac_extensions:
+  https://landsat.usgs.gov/stac/landsat-extension/v1.1.1/schema.json
+  https://stac-extensions.github.io/view/v1.0.0/schema.json
+  https://stac-extensions.github.io/projection/v1.0.0/schema.json
+  https://stac-extensions.github.io/eo/v1.0.0/schema.json
+  https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json
+  https://stac-extensions.github.io/storage/v1.0.0/schema.json
+  https://stac-extensions.github.io/accuracy/v1.0.0/schema.json
+  https://stac-extensions.github.io/card4l/v0.1.0/optical/schema.json
+  https://stac-extensions.github.io/classification/v1.0.0/schema.json
+collection: landsat-c2l2-sr
+description: Landsat Collection 2 Level-2 Surface Reflectance Product

@@ -30,6 +30,7 @@ class User(AbstractUser):
 
     class Meta:
         """Meta-data of the User class."""
+
         verbose_name = 'пользователь'
         verbose_name_plural = 'Пользователи'
         ordering = ('id',)

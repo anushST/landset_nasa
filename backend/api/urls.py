@@ -1,14 +1,21 @@
 """URL configuration of api app."""
-from django.urls import path
+from django.urls import include, path
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from rest_framework import permissions
-# from rest_framework.routers import DefaultRouter
+from rest_framework.routers import DefaultRouter
 
 from .constants import API_VERSION
+from .views import acquisitions, scene, scenes, ReminderViewSet
+
+router = DefaultRouter()
+router.register('reminders', ReminderViewSet)
 
 urlpatterns = [
-
+    path('', include(router.urls)),
+    path(f'{API_VERSION}/scenes/', scenes, name='scenes'),
+    path(f'{API_VERSION}/scene/', scene, name='scene'),
+    path(f'{API_VERSION}/acquisitions/', acquisitions, name='acquisitions'),
 ]
 
 schema_view = get_schema_view(
