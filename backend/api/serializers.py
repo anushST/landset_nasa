@@ -1,6 +1,13 @@
 """Serializers of api app."""
 from rest_framework import serializers
-from .models import Reminder
+from .models import Reminder, SatelliteAcqusition
+
+
+class SatelliteAcqusitionSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = SatelliteAcqusition
+        fields='__all__'
 
 
 class ReminderSerializer(serializers.ModelSerializer):

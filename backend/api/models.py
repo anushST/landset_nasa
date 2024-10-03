@@ -5,6 +5,23 @@ from django.db import models
 User = get_user_model()
 
 
+class SatelliteAcqusition(models.Model):
+    """Satellite acqusitions."""
+
+    path = models.CharField(max_length=3)
+    row = models.CharField(max_length=3)
+    datetime = models.DateTimeField()
+    satellite = models.CharField(max_length=20)
+
+
+class AcqusitionDatesInfo(models.Model):
+    """Acqusition dates info."""
+
+    satellite = models.CharField(max_length=20)
+    has_info_date = models.DateField()
+
+
+
 class Reminder(models.Model):
     """
     Model representing a reminder.

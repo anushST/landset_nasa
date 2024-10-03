@@ -1,4 +1,5 @@
 """Views of api app."""
+from datetime import datetime
 from random import randint
 
 import redis
@@ -9,8 +10,8 @@ from rest_framework import permissions, status, viewsets
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 
-from .models import Reminder
-from .serializers import ReminderSerializer, LandsatSearchSerializer
+from .models import Reminder, SatelliteAcqusition
+from .serializers import ReminderSerializer, LandsatSearchSerializer, SatelliteAcqusitionSerializer
 from .aws import get_landsat_items
 
 r = redis.Redis(host='redis', port=6379, db=0)
@@ -153,6 +154,41 @@ def scenes_request_status(request):
 def scene(request):
     """Get scene."""
     return Response({}, status=status.HTTP_200_OK)
+
+
+@swagger_auto_schema(
+    method='get',
+    manual_parameters=[
+        openapi.Parameter(
+            'datetime',
+            openapi.IN_QUERY,
+            description="Date in YYYY-MM-DD format.",
+            type=openapi.TYPE_STRING,
+            required=True
+        ),
+    ],
+    responses={
+        200: "A list of satellite acquisition data.",
+        400: "Invalid date format.",
+    },
+    tags=['Scenes']
+)
+@api_view(['GET'])
+@permission_classes([permissions.IsAuthenticated])
+def satellate_data(request):
+    """Get scene."""
+    dt= request.GET.get('datetime')
+
+    if not dt:
+        return Response({"error": "datetime parameter is required"}, status=status.HTTP_400_BAD_REQUEST)
+
+    date: datetime = datetime.strptime(dt, "%Y-%m-%d")
+
+    data = SatelliteAcqusition.objects.filter(datetime__date=dt)
+
+    result = [{"path": item.path, "row": item.row, "satellite": item.satellite, "datetime": item.datetime} for item in data]
+
+    return Response(result, status=status.HTTP_200_OK)
 
 
 @swagger_auto_schema(
