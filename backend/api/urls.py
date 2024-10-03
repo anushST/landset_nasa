@@ -6,14 +6,15 @@ from rest_framework import permissions
 from rest_framework.routers import DefaultRouter
 
 from .constants import API_VERSION
-from .views import acquisitions, scene, scenes, ReminderViewSet
+from .views import acquisitions, scenes_request_status, scene, scenes, ReminderViewSet
 
 router = DefaultRouter()
 router.register('reminders', ReminderViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path(f'{API_VERSION}/scenes/', scenes, name='scenes'),
+    path(f'{API_VERSION}/get_scenes/', scenes_request_status, name='scenes_status'),
+    path(f'{API_VERSION}/pend_scenes/', scenes, name='scenes'),
     path(f'{API_VERSION}/scene/', scene, name='scene'),
     path(f'{API_VERSION}/acquisitions/', acquisitions, name='acquisitions'),
 ]

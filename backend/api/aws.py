@@ -9,12 +9,6 @@ def BuildSquare(lon, lat, delta):
     geometry = {"type": "Polygon", "coordinates": [[ c1, c2, c3, c4, c1 ]]}
     return geometry
 
-# for item in Landsat_items:
-#     scene_id = item.get('id')  # Извлекаем имя сцены
-#     scene_datetime = item.get('properties', {}).get('datetime')  # Извлекаем время съёмки
-#     print(f"Scene ID: {scene_id}, Date and Time: {scene_datetime}")
-
-
 def get_landsat_items(lon, lat, time_range, min_cloud=0, max_cloud=100):
     LandsatSTAC = Client.open("https://landsatlook.usgs.gov/stac-server",
                               headers=[])
@@ -36,7 +30,7 @@ def get_landsat_items(lon, lat, time_range, min_cloud=0, max_cloud=100):
 
 def dict_to_string(data_dict):
     """Convert dictionary (including nested lists/dicts) to a single formatted string."""
-    
+
     def recursive_format(d, indent=0):
         """Helper function to format the dictionary recursively."""
         lines = []
