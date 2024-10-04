@@ -7,9 +7,10 @@ from rest_framework.routers import DefaultRouter
 
 from .constants import API_VERSION
 from .views import acquisitions, scenes_request_status, scene, scenes, ReminderViewSet, satellate_data
+from .remind_views import acqusition_remind_view, plan_remind_view, plan_remind_view_new
 
 router = DefaultRouter()
-router.register('reminders', ReminderViewSet)
+router.register('reminder', ReminderViewSet)
 
 urlpatterns = [
     path(f'{API_VERSION}/', include(router.urls)),
@@ -18,6 +19,10 @@ urlpatterns = [
     path(f'{API_VERSION}/pend_scenes/', scenes, name='scenes'),
     path(f'{API_VERSION}/scene/', scene, name='scene'),
     path(f'{API_VERSION}/acquisitions/', acquisitions, name='acquisitions'),
+
+    path(f'{API_VERSION}/reminders/acqusition_remind/', acqusition_remind_view, name='remind_acqusition'),
+    path(f'{API_VERSION}/reminders/plan_remind', plan_remind_view, name='plan_remind'),
+    path(f'{API_VERSION}/reminders/plan_remind_extra/', plan_remind_view_new, name='_plan_remind'),
 ]
 
 schema_view = get_schema_view(

@@ -58,7 +58,7 @@ async def fetch_and_save_data():
                                 continue
                         else:
                             print(f"Ошибка {response.status} для спутника {satellite} и даты {date_str}")
-        await asyncio.sleep(3600)
+        await asyncio.sleep(3600*3)
 
 
 async def save_to_db(features, datetime: datetime, satellite):

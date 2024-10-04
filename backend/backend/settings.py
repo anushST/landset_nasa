@@ -22,7 +22,7 @@ DEBUG = True
 
 HOST_NAME = os.getenv('HOST_NAME')
 
-ALLOWED_HOSTS = [HOST_NAME, 'localhost', '127.0.0.1',]
+ALLOWED_HOSTS = [HOST_NAME, 'localhost', '127.0.0.1', 'backend']
 
 CORS_URLS_REGEX = r'^/api/.*$'
 CORS_ORIGIN_ALLOW_ALL = True

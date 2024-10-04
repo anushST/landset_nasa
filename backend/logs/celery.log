@@ -436,3 +436,599 @@ you should set broker_connection_retry_on_startup to True.
 [2024-10-02 17:21:40,889: INFO/MainProcess] mingle: all alone
 [2024-10-02 17:21:40,921: INFO/MainProcess] celery@8f1054df87a2 ready.
 [2024-10-02 17:21:42,705: INFO/MainProcess] Events of group {task} enabled by remote.
+[2024-10-03 11:41:44,217: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-03 11:41:44,228: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-10-03 11:41:44,230: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-03 11:41:44,234: INFO/MainProcess] mingle: searching for neighbors
+[2024-10-03 11:41:45,251: INFO/MainProcess] mingle: all alone
+[2024-10-03 11:41:45,297: INFO/MainProcess] celery@8c1d570cfd17 ready.
+[2024-10-03 11:41:45,927: INFO/MainProcess] Events of group {task} enabled by remote.
+[2024-10-04 08:04:31,881: ERROR/MainProcess] Received unregistered task of type 'api.tasks.acqusition_remind'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[["Your data is on the way", 1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (105b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'api.tasks.acqusition_remind', 'id': '3662c8ae-3c42-4130-b099-5db8bfa58f1f', 'shadow': None, 'eta': '2024-10-04T03:06:49.699021+00:00', 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '3662c8ae-3c42-4130-b099-5db8bfa58f1f', 'parent_id': None, 'argsrepr': "('Your data is on the way', 1)", 'kwargsrepr': '{}', 'origin': 'gen74@76f1ef593835', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'api.tasks.acqusition_remind'
+[2024-10-04 03:08:50,368: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 03:08:50,388: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-10-04 03:08:50,391: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 03:08:50,396: INFO/MainProcess] mingle: searching for neighbors
+[2024-10-04 03:08:51,419: INFO/MainProcess] mingle: all alone
+[2024-10-04 03:08:51,470: INFO/MainProcess] celery@8c1d570cfd17 ready.
+[2024-10-04 03:08:51,855: INFO/MainProcess] Events of group {task} enabled by remote.
+[2024-10-04 03:09:18,215: INFO/MainProcess] Task api.tasks.acqusition_remind[70299028-1141-40c1-89dd-50d1e6c77e9a] received
+[2024-10-04 03:10:49,150: ERROR/ForkPoolWorker-7] Task api.tasks.acqusition_remind[70299028-1141-40c1-89dd-50d1e6c77e9a] raised unexpected: AttributeError("'int' object has no attribute 'email'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 13, in acqusition_remind
+    [user.email],
+AttributeError: 'int' object has no attribute 'email'
+[2024-10-04 03:15:11,397: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 03:15:11,441: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-10-04 03:15:11,445: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 03:15:11,457: INFO/MainProcess] mingle: searching for neighbors
+[2024-10-04 03:15:12,483: INFO/MainProcess] mingle: all alone
+[2024-10-04 03:15:12,517: INFO/MainProcess] celery@8c1d570cfd17 ready.
+[2024-10-04 03:15:13,736: INFO/MainProcess] Events of group {task} enabled by remote.
+[2024-10-04 03:15:30,958: INFO/MainProcess] Task api.tasks.acqusition_remind[148583e3-a8db-476e-8258-143923215f60] received
+[2024-10-04 03:16:53,319: INFO/ForkPoolWorker-7] Task api.tasks.acqusition_remind[148583e3-a8db-476e-8258-143923215f60] succeeded in 3.462007021997124s: None
+[2024-10-04 03:20:14,467: INFO/MainProcess] Task api.tasks.acqusition_remind[124393e0-27db-42ea-9223-c09ef88ed7d6] received
+[2024-10-04 03:21:06,338: INFO/ForkPoolWorker-7] Task api.tasks.acqusition_remind[124393e0-27db-42ea-9223-c09ef88ed7d6] succeeded in 6.876749231996655s: None
+[2024-10-04 04:36:38,347: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 04:36:38,356: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-10-04 04:36:38,358: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 04:36:38,360: INFO/MainProcess] mingle: searching for neighbors
+[2024-10-04 04:36:39,371: INFO/MainProcess] mingle: all alone
+[2024-10-04 04:36:39,409: INFO/MainProcess] celery@8c1d570cfd17 ready.
+[2024-10-04 04:36:41,827: INFO/MainProcess] Events of group {task} enabled by remote.
+[2024-10-04 04:42:24,022: INFO/MainProcess] Task api.tasks.plan_remind[03dba454-d2f4-4a35-badf-5ba28d6c1e1a] received
+[2024-10-04 04:42:24,091: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[03dba454-d2f4-4a35-badf-5ba28d6c1e1a] raised unexpected: ConnectionError(MaxRetryError("HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /api/v1/reminders/_plan_remind/?satellites=Landsat-8&areas=160%7C41&request_day=2024-10-04+04%3A42%3A24.027756 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc770307460>: Failed to establish a new connection: [Errno 111] Connection refused'))"))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 441, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 279, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 214, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc770307460>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /api/v1/reminders/_plan_remind/?satellites=Landsat-8&areas=160%7C41&request_day=2024-10-04+04%3A42%3A24.027756 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc770307460>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 46, in plan_remind
+    response = requests.get(f'http://localhost:8001/api/v1/reminders/_plan_remind/', params=params)
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /api/v1/reminders/_plan_remind/?satellites=Landsat-8&areas=160%7C41&request_day=2024-10-04+04%3A42%3A24.027756 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc770307460>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2024-10-04 04:44:53,104: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 04:44:53,115: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-10-04 04:44:53,117: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 04:44:53,121: INFO/MainProcess] mingle: searching for neighbors
+[2024-10-04 04:44:54,133: INFO/MainProcess] mingle: all alone
+[2024-10-04 04:44:54,163: INFO/MainProcess] celery@8c1d570cfd17 ready.
+[2024-10-04 04:45:11,031: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 04:45:11,046: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-10-04 04:45:11,047: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 04:45:11,051: INFO/MainProcess] mingle: searching for neighbors
+[2024-10-04 04:45:12,066: INFO/MainProcess] mingle: all alone
+[2024-10-04 04:45:12,100: INFO/MainProcess] celery@8c1d570cfd17 ready.
+[2024-10-04 04:45:15,145: INFO/MainProcess] Events of group {task} enabled by remote.
+[2024-10-04 04:46:34,729: INFO/MainProcess] Task api.tasks.plan_remind[f1443b23-9f5b-431f-a25f-5b158c541dd1] received
+[2024-10-04 04:46:34,769: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[f1443b23-9f5b-431f-a25f-5b158c541dd1] raised unexpected: ConnectionError(MaxRetryError("HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/v1/reminders/_plan_remind/?satellites=Landsat-8&areas=160%7C41&request_day=2024-10-04+04%3A46%3A34.734275 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4a1e691490>: Failed to establish a new connection: [Errno 111] Connection refused'))"))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 441, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 279, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 214, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f4a1e691490>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/v1/reminders/_plan_remind/?satellites=Landsat-8&areas=160%7C41&request_day=2024-10-04+04%3A46%3A34.734275 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4a1e691490>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 46, in plan_remind
+    response = requests.get(f'http://localhost:8000/api/v1/reminders/_plan_remind/', params=params)
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/v1/reminders/_plan_remind/?satellites=Landsat-8&areas=160%7C41&request_day=2024-10-04+04%3A46%3A34.734275 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4a1e691490>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2024-10-04 04:50:01,926: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 04:50:01,939: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-10-04 04:50:01,941: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 04:50:01,944: INFO/MainProcess] mingle: searching for neighbors
+[2024-10-04 04:50:02,957: INFO/MainProcess] mingle: all alone
+[2024-10-04 04:50:02,986: INFO/MainProcess] celery@8c1d570cfd17 ready.
+[2024-10-04 04:50:05,432: INFO/MainProcess] Task api.tasks.plan_remind[851a6165-6889-499f-93f5-5ca9cccd894e] received
+[2024-10-04 04:50:05,536: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[851a6165-6889-499f-93f5-5ca9cccd894e] raised unexpected: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 48, in plan_remind
+    results = response.json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2024-10-04 04:50:05,872: INFO/MainProcess] Events of group {task} enabled by remote.
+[2024-10-04 04:50:09,240: INFO/MainProcess] Task api.tasks.plan_remind[7e1603b2-fb71-4f70-ab3a-4ac5fcad7cca] received
+[2024-10-04 04:50:09,293: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[7e1603b2-fb71-4f70-ab3a-4ac5fcad7cca] raised unexpected: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 48, in plan_remind
+    results = response.json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2024-10-04 05:28:15,584: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 05:28:15,599: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-10-04 05:28:15,601: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 05:28:15,614: INFO/MainProcess] mingle: searching for neighbors
+[2024-10-04 05:28:16,634: INFO/MainProcess] mingle: all alone
+[2024-10-04 05:28:16,691: INFO/MainProcess] celery@8c1d570cfd17 ready.
+[2024-10-04 05:28:18,868: INFO/MainProcess] Events of group {task} enabled by remote.
+[2024-10-04 05:29:01,953: INFO/MainProcess] Task api.tasks.plan_remind[28d3756c-5f77-4562-8ca3-ea8efe9798e8] received
+[2024-10-04 05:29:02,159: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[28d3756c-5f77-4562-8ca3-ea8efe9798e8] raised unexpected: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 50, in plan_remind
+    results = response.json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2024-10-04 05:32:07,589: INFO/MainProcess] Task api.tasks.plan_remind[d97a15be-526f-42c0-b154-d8d29e78465d] received
+[2024-10-04 05:32:07,668: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[d97a15be-526f-42c0-b154-d8d29e78465d] raised unexpected: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 50, in plan_remind
+    results = response.json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2024-10-04 05:36:36,345: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 05:36:36,356: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-10-04 05:36:36,358: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 05:36:36,361: INFO/MainProcess] mingle: searching for neighbors
+[2024-10-04 05:36:37,373: INFO/MainProcess] mingle: all alone
+[2024-10-04 05:36:37,418: INFO/MainProcess] celery@8c1d570cfd17 ready.
+[2024-10-04 05:36:39,146: INFO/MainProcess] Task api.tasks.plan_remind[bf621bc2-2188-4b41-9c4c-707a12057e5b] received
+[2024-10-04 05:36:39,237: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[bf621bc2-2188-4b41-9c4c-707a12057e5b] raised unexpected: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 50, in plan_remind
+    results = response.json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2024-10-04 05:36:39,391: INFO/MainProcess] Events of group {task} enabled by remote.
+[2024-10-04 05:38:45,902: INFO/MainProcess] Task api.tasks.plan_remind[7664040e-cae9-488c-b8d7-c6a23f49e3fb] received
+[2024-10-04 05:38:45,968: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[7664040e-cae9-488c-b8d7-c6a23f49e3fb] raised unexpected: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 50, in plan_remind
+    results = response.json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2024-10-04 05:41:09,159: INFO/MainProcess] Task api.tasks.plan_remind[88b88963-9392-43d7-9dfc-772b3fd9986c] received
+[2024-10-04 05:41:09,195: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[88b88963-9392-43d7-9dfc-772b3fd9986c] raised unexpected: ValueError('too many values to unpack (expected 4)')
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 54, in plan_remind
+    for path, row, satellite, datetime_ in results:
+ValueError: too many values to unpack (expected 4)
+[2024-10-04 05:41:57,437: INFO/MainProcess] Task api.tasks.plan_remind[8ec2cd92-c415-4f83-90ed-ee22cccfd86f] received
+[2024-10-04 05:41:57,624: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[8ec2cd92-c415-4f83-90ed-ee22cccfd86f] raised unexpected: ValueError('too many values to unpack (expected 4)')
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 54, in plan_remind
+    for path, row, satellite, datetime_ in results:
+ValueError: too many values to unpack (expected 4)
+[2024-10-04 05:45:01,317: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 05:45:01,330: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-10-04 05:45:01,331: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 05:45:01,336: INFO/MainProcess] mingle: searching for neighbors
+[2024-10-04 05:45:02,379: INFO/MainProcess] mingle: all alone
+[2024-10-04 05:45:02,405: INFO/MainProcess] celery@8c1d570cfd17 ready.
+[2024-10-04 05:45:04,125: INFO/MainProcess] Task api.tasks.plan_remind[b55d3e25-524e-45fb-b8fb-ec3f8b9e31bb] received
+[2024-10-04 05:45:04,159: INFO/MainProcess] Events of group {task} enabled by remote.
+[2024-10-04 05:45:04,237: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[b55d3e25-524e-45fb-b8fb-ec3f8b9e31bb] raised unexpected: TypeError('string indices must be integers')
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 55, in plan_remind
+    message += f"- Satellite {data['data']} will acquire data on {data['datetime']} for path {data['path']}, row {data['row']}.\n"
+TypeError: string indices must be integers
+[2024-10-04 05:47:31,707: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 05:47:31,728: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-10-04 05:47:31,731: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 05:47:31,743: INFO/MainProcess] mingle: searching for neighbors
+[2024-10-04 05:47:32,788: INFO/MainProcess] mingle: all alone
+[2024-10-04 05:47:32,823: INFO/MainProcess] celery@8c1d570cfd17 ready.
+[2024-10-04 05:47:34,199: INFO/MainProcess] Task api.tasks.plan_remind[f3c9d74a-7d29-4566-b745-0674c0e57234] received
+[2024-10-04 05:47:34,423: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[f3c9d74a-7d29-4566-b745-0674c0e57234] raised unexpected: KeyError('data')
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 55, in plan_remind
+    message += f"- Satellite {data['data']} will acquire data on {data['datetime']} for path {data['path']}, row {data['row']}.\n"
+KeyError: 'data'
+[2024-10-04 05:47:34,555: INFO/MainProcess] Events of group {task} enabled by remote.
+[2024-10-04 05:48:44,658: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 05:48:44,670: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-10-04 05:48:44,672: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 05:48:44,677: INFO/MainProcess] mingle: searching for neighbors
+[2024-10-04 05:48:45,695: INFO/MainProcess] mingle: all alone
+[2024-10-04 05:48:45,762: INFO/MainProcess] celery@8c1d570cfd17 ready.
+[2024-10-04 05:48:47,034: INFO/MainProcess] Task api.tasks.plan_remind[e45f02cf-6751-4f48-82a6-7f27963e87ee] received
+[2024-10-04 05:48:47,631: INFO/MainProcess] Events of group {task} enabled by remote.
+[2024-10-04 05:48:53,526: INFO/ForkPoolWorker-7] Task api.tasks.plan_remind[e45f02cf-6751-4f48-82a6-7f27963e87ee] succeeded in 6.487541930000589s: None
+[2024-10-04 08:24:52,901: INFO/MainProcess] Task api.tasks.plan_remind[7a33eb57-db88-43fc-aa7d-60380c09054a] received
+[2024-10-04 08:24:53,015: INFO/MainProcess] Task api.tasks.plan_remind[3424c77f-d3cf-406d-afc5-7ca9e585cfa5] received
+[2024-10-04 08:24:53,015: INFO/ForkPoolWorker-7] Task api.tasks.plan_remind[7a33eb57-db88-43fc-aa7d-60380c09054a] succeeded in 0.10316383199824486s: None
+[2024-10-04 08:26:13,086: INFO/MainProcess] Task api.tasks.plan_remind[f3c98511-b6de-4bf8-bf7b-5f81f75dbef5] received
+[2024-10-04 08:26:13,183: INFO/MainProcess] Task api.tasks.plan_remind[fb4906c6-9fe4-4008-9baa-dd6dc01d545e] received
+[2024-10-04 08:26:13,183: INFO/ForkPoolWorker-7] Task api.tasks.plan_remind[f3c98511-b6de-4bf8-bf7b-5f81f75dbef5] succeeded in 0.0925785849976819s: None
+[2024-10-04 08:26:49,530: INFO/MainProcess] Task api.tasks.plan_remind[d59e932d-e50e-4234-b481-681899d53006] received
+[2024-10-04 08:26:49,630: INFO/MainProcess] Task api.tasks.plan_remind[551ab6c6-4305-4c14-bb7d-79cec6fcdb48] received
+[2024-10-04 08:26:49,630: INFO/ForkPoolWorker-7] Task api.tasks.plan_remind[d59e932d-e50e-4234-b481-681899d53006] succeeded in 0.0957890680001583s: None
+[2024-10-04 08:28:16,054: WARNING/MainProcess] Restoring 3 unacknowledged message(s)
+[2024-10-04 08:28:35,656: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 08:28:35,689: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-10-04 08:28:35,692: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-04 08:28:35,707: INFO/MainProcess] mingle: searching for neighbors
+[2024-10-04 08:28:36,732: INFO/MainProcess] mingle: all alone
+[2024-10-04 08:28:36,796: INFO/MainProcess] celery@8c1d570cfd17 ready.
+[2024-10-04 08:28:36,805: INFO/MainProcess] Task api.tasks.plan_remind[551ab6c6-4305-4c14-bb7d-79cec6fcdb48] received
+[2024-10-04 08:28:36,810: INFO/MainProcess] Task api.tasks.plan_remind[fb4906c6-9fe4-4008-9baa-dd6dc01d545e] received
+[2024-10-04 08:28:36,817: INFO/MainProcess] Task api.tasks.plan_remind[3424c77f-d3cf-406d-afc5-7ca9e585cfa5] received
+[2024-10-04 08:28:39,096: INFO/MainProcess] Events of group {task} enabled by remote.
+[2024-10-04 08:28:41,989: INFO/MainProcess] Task api.tasks.plan_remind[f349edb9-6a73-4a5a-9704-7b3dfb3049a8] received
+[2024-10-04 08:28:42,143: INFO/MainProcess] Task api.tasks.plan_remind[1a75409e-e18c-461f-bf12-dcf5bd294fe9] received
+[2024-10-04 08:28:42,146: INFO/ForkPoolWorker-7] Task api.tasks.plan_remind[f349edb9-6a73-4a5a-9704-7b3dfb3049a8] succeeded in 0.15154821099713445s: None
+[2024-10-04 08:31:17,606: INFO/MainProcess] Task api.tasks.plan_remind[72349a99-9b58-47ff-bbbf-97e90f3ca202] received
+[2024-10-04 08:31:17,671: INFO/MainProcess] Task api.tasks.plan_remind[6d9ed21b-a14d-455a-87cf-f9511ae3bd27] received
+[2024-10-04 08:31:17,671: INFO/ForkPoolWorker-7] Task api.tasks.plan_remind[72349a99-9b58-47ff-bbbf-97e90f3ca202] succeeded in 0.05996592799783684s: None
+[2024-10-04 08:31:51,423: INFO/MainProcess] Task api.tasks.plan_remind[57c2162c-8f11-4fb5-bfe8-cfae649288cc] received
+[2024-10-04 08:31:51,500: INFO/MainProcess] Task api.tasks.plan_remind[bc57ba5f-2782-4af6-971a-23ce14c22e8b] received
+[2024-10-04 08:31:51,502: INFO/ForkPoolWorker-7] Task api.tasks.plan_remind[57c2162c-8f11-4fb5-bfe8-cfae649288cc] succeeded in 0.07475510599033441s: None

@@ -12,7 +12,6 @@ from rest_framework.response import Response
 
 from .models import Reminder, SatelliteAcqusition
 from .serializers import ReminderSerializer, LandsatSearchSerializer, SatelliteAcqusitionSerializer
-from .aws import get_landsat_items
 
 r = redis.Redis(host='redis', port=6379, db=0)
 
