@@ -1032,3 +1032,5 @@ you should set broker_connection_retry_on_startup to True.
 [2024-10-04 08:31:51,423: INFO/MainProcess] Task api.tasks.plan_remind[57c2162c-8f11-4fb5-bfe8-cfae649288cc] received
 [2024-10-04 08:31:51,500: INFO/MainProcess] Task api.tasks.plan_remind[bc57ba5f-2782-4af6-971a-23ce14c22e8b] received
 [2024-10-04 08:31:51,502: INFO/ForkPoolWorker-7] Task api.tasks.plan_remind[57c2162c-8f11-4fb5-bfe8-cfae649288cc] succeeded in 0.07475510599033441s: None
+[2024-10-04 08:40:45,081: INFO/MainProcess] Task api.tasks.plan_remind[fd8d755c-971f-4006-b217-8ffa8e7d4dfe] received
+[2024-10-04 08:40:50,912: INFO/ForkPoolWorker-7] Task api.tasks.plan_remind[fd8d755c-971f-4006-b217-8ffa8e7d4dfe] succeeded in 5.823627852005302s: None

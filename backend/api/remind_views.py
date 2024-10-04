@@ -23,7 +23,7 @@ from .models import SatelliteAcqusition
     responses={200: openapi.Response('Remind set successfully', openapi.Schema(type=openapi.TYPE_OBJECT, properties={
         'status': openapi.Schema(type=openapi.TYPE_STRING)
     }))},
-    tags=['Reminders2']
+    tags=['Reminders']
 )
 @api_view(['GET'])
 @permission_classes([permissions.IsAuthenticated])
@@ -97,7 +97,7 @@ def acqusition_remind_view(request):
             }
         )),
     },
-    tags=['Reminders2']
+    tags=['Reminders']
 )
 @api_view(['GET'])
 @permission_classes([permissions.IsAuthenticated])
@@ -110,6 +110,7 @@ def plan_remind_view(request):
     return Response({'status': 'Message set successfully'})
 
 
+@swagger_auto_schema(auto_schema=None)
 @api_view(['GET'])
 def plan_remind_view_new(request):
     satellites = request.GET.get('satellites', '').split(',')
@@ -128,6 +129,69 @@ def plan_remind_view_new(request):
             datetime__gt=date
         )
         results.append(acquisitions)
+
+    data = []
+
+    for acqs in results:
+        for acq in acqs:
+            data.append(
+                {
+                    'satellite': acq.satellite,
+                    'path': acq.path,
+                    'row': acq.row,
+                    'datetime': acq.datetime
+                }
+            )
+
+    return Response({'acquisitions': data}, status=status.HTTP_200_OK)
+
+
+
+@swagger_auto_schema(
+    method='get',
+    manual_parameters=[
+        openapi.Parameter(
+            'pathrow',
+            openapi.IN_QUERY,
+            description="Path and Row in the format 'PATH|ROW', for example '160|41'",
+            type=openapi.TYPE_STRING,
+            required=True
+        )
+    ],
+    responses={
+        200: openapi.Response(
+            description="List of acquisitions",
+            examples={
+                'application/json': {
+                    'acquisitions': [
+                        {
+                            'satellite': 'Landsat-8',
+                            'path': '160',
+                            'row': '41',
+                            'datetime': '2024-10-04T04:46:34.734275Z'
+                        }
+                    ]
+                }
+            }
+        ),
+        400: 'Bad Request'
+    },
+    tags=['Reminders']
+)
+@api_view(['GET'])
+def get_square_acqusitions(request):
+    pathrow = request.GET.get('pathrow', '').split('|')
+    date = datetime.utcnow()
+    satellites = 'Landsat-8,Landsat-9'.split(',')
+
+    results = []
+    acquisitions = SatelliteAcqusition.objects.filter(
+        satellite__in=satellites,
+        path=pathrow[0],
+        row=pathrow[1],
+        datetime__gt=date
+    )
+    results.append(acquisitions)
 
     data = []
 
