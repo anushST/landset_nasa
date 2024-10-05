@@ -42,7 +42,7 @@ def get_scene_data(product_id, lat, lon):
         '_SR_B6.TIF',
         '_SR_B7.TIF',
         '_SR_QA_AEROSOL.TIF',
-        # '_SR_stac.json',
+        # # '_SR_stac.json',
         '_ST_ATRAN.TIF',
         '_ST_B10.TIF',
         '_ST_CDIST.TIF',
@@ -58,7 +58,7 @@ def get_scene_data(product_id, lat, lon):
     output = {}
     with rasterio.Env(aws_session):
         for file in file_endings:
-            url = cog_url + product_id + file + '/'
+            url = cog_url + product_id + file
             with rasterio.open(url) as dataset:
                 img_crs = dataset.crs
                 transformer = Transformer.from_crs("EPSG:4326", img_crs, always_xy=True)
@@ -69,5 +69,6 @@ def get_scene_data(product_id, lat, lon):
                 output[key] = {
                     'row': row, 'col': col, 'pixel_value': pixel_value,
                 }
+    return output
 
 print(get_scene_data('LC08_L2SP_154033_20240924_20240928_02_T1', 38.5548, 68.7659))

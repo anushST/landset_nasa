@@ -12,6 +12,7 @@ from rest_framework.response import Response
 
 from .models import Reminder, SatelliteAcqusition
 from .serializers import ReminderSerializer, LandsatSearchSerializer, SatelliteAcqusitionSerializer
+# from .message_retreive import get_scene_data
 
 r = redis.Redis(host='redis', port=6379, db=0)
 
@@ -55,7 +56,6 @@ def get_thumbnail(id):
     tags=['Scenes']
 )
 @api_view(['POST'])
-@permission_classes([permissions.IsAuthenticated])
 def scenes(request):
     """Get scenes."""
     serializer = LandsatSearchSerializer(data=request.data)
@@ -105,7 +105,6 @@ def scenes(request):
     tags=['Scenes']
 )
 @api_view(['GET'])
-@permission_classes([permissions.IsAuthenticated])
 def scenes_request_status(request):
     request_id = request.GET.get('request_id')
 
@@ -149,7 +148,6 @@ def scenes_request_status(request):
         tags=['Scenes']
     )
 @api_view(['GET'])
-@permission_classes([permissions.IsAuthenticated])
 def scene(request):
     """Get scene."""
     return Response({}, status=status.HTTP_200_OK)
@@ -173,7 +171,6 @@ def scene(request):
     tags=['Scenes']
 )
 @api_view(['GET'])
-@permission_classes([permissions.IsAuthenticated])
 def satellate_data(request):
     """Get scene."""
     dt= request.GET.get('datetime')
@@ -189,8 +186,50 @@ def satellate_data(request):
 
     return Response(result, status=status.HTTP_200_OK)
 
+@swagger_auto_schema(
+    method='get',
+    manual_parameters=[
+        openapi.Parameter(
+            'lat',
+            openapi.IN_QUERY,
+            description="Широта (lat)",
+            type=openapi.TYPE_STRING,
+            required=True
+        ),
+        openapi.Parameter(
+            'lon',
+            openapi.IN_QUERY,
+            description="Долгота (lon)",
+            type=openapi.TYPE_STRING,
+            required=True
+        ),
+        openapi.Parameter(
+            'product_id',
+            openapi.IN_QUERY,
+            description="Идентификатор продукта (product_id)",
+            type=openapi.TYPE_STRING,
+            required=True
+        ),
+    ],
+    responses={
+        200: 'Success',
+        400: 'Invalid Input'
+    }
+)
 @api_view(['GET'])
-def get_scene_data(request):
-    lat = request.GET.get('lat', '')
-    lon = request.GET.get('lon', '')
-    product_id = request.GET.get('product_id', '')
+def get_scene_data_view(request):
+    lat = request.GET.get('lat', None)
+    lon = request.GET.get('lon', None)
+    product_id = request.GET.get('product_id', None)
+
+    # Проверка, что все параметры переданы
+    if not lat or not lon or not product_id:
+        return Response({"error": "Параметры lat, lon и product_id обязательны."}, status=status.HTTP_400_BAD_REQUEST)
+
+    try:
+        # Вызов функции для получения данных сцены
+        # data = get_scene_data(product_id, lat, lon)
+        return Response({}, status=status.HTTP_200_OK)
+    except Exception as e:
+        # Обработка любых ошибок
+        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
