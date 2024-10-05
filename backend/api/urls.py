@@ -6,18 +6,15 @@ from rest_framework import permissions
 from rest_framework.routers import DefaultRouter
 
 from .constants import API_VERSION
-from .views import acquisitions, scenes_request_status, scene, scenes, ReminderViewSet, satellate_data
+from .views import scenes_request_status, scene, scenes, satellate_data
 from .remind_views import acqusition_remind_view, plan_remind_view, plan_remind_view_new, get_square_acqusitions
 
-router = DefaultRouter()
-
 urlpatterns = [
-    path(f'{API_VERSION}/', include(router.urls)),
+    path(f'{API_VERSION}/', include('users.urls')),
     path(f'{API_VERSION}/satellate-data/', satellate_data, name='satellate_data'),
     path(f'{API_VERSION}/get_scenes/', scenes_request_status, name='scenes_status'),
     path(f'{API_VERSION}/pend_scenes/', scenes, name='scenes'),
     path(f'{API_VERSION}/scene/', scene, name='scene'),
-    path(f'{API_VERSION}/acquisitions/', acquisitions, name='acquisitions'),
 
     path(f'{API_VERSION}/reminders/acqusition_remind/', acqusition_remind_view, name='remind_acqusition'),
     path(f'{API_VERSION}/reminders/plan_remind', plan_remind_view, name='plan_remind'),

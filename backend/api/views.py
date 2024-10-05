@@ -119,7 +119,7 @@ def scenes_request_status(request):
             assets = item.get('assets', {})
 
             items.append({
-                "id": item.get('id'),
+                "id": item.get('id')[:-3],
                 "cloud_cover": properties.get('eo:cloud_cover'),
                 "scene_datetime": properties.get('datetime'),
                 "platform": properties.get('platform'),
@@ -189,140 +189,8 @@ def satellate_data(request):
 
     return Response(result, status=status.HTTP_200_OK)
 
-
-@swagger_auto_schema(
-        method='get',
-        operation_description="Retrieve the current user's data.",
-        responses={
-            200: openapi.Response('User data retrieved successfully'),
-            401: 'Unauthorized',
-        },
-        operation_summary="Get current user data",
-        tags=['Scenes']
-    )
 @api_view(['GET'])
-@permission_classes([permissions.IsAuthenticated])
-def acquisitions(request):
-    """Return the accqusitions."""
-    return Response({}, status=status.HTTP_200_OK)
-
-
-class ReminderViewSet(viewsets.ModelViewSet):
-    """
-    ViewSet for managing Reminder objects.
-
-    This ViewSet provides actions to list, create, update, and delete
-    reminders for authenticated users. The reminders are filtered by
-    the currently authenticated user, ensuring that users only access
-    their own reminders.
-
-    **Permissions**:
-    - Only authenticated users can access this ViewSet.
-    """
-
-    queryset = Reminder.objects.all()
-    serializer_class = ReminderSerializer
-    permission_classes = [permissions.IsAuthenticated]
-
-    @swagger_auto_schema(
-        responses={
-            200: openapi.Response('List of Reminders',
-                                  ReminderSerializer(many=True)),
-            401: 'Unauthorized'
-        },
-        operation_description=("Retrieve all reminders for the "
-                               "authenticated user."),
-        operation_summary="List Reminders",
-        tags=['Reminder']
-    )
-    def list(self, request, *args, **kwargs):
-        """Retrieve a list of reminders for the current authenticated user."""
-        return super().list(request, *args, **kwargs)
-
-    @swagger_auto_schema(
-        responses={
-            200: openapi.Response('Retrieved Reminder', ReminderSerializer),
-            404: 'Not Found',
-            401: 'Unauthorized'
-        },
-        operation_description=("Retrieve a specific reminder for the"
-                               " authenticated user."),
-        operation_summary="Retrieve Reminder",
-        tags=['Reminder']
-    )
-    def retrieve(self, request, *args, **kwargs):
-        """Retrieve a specific reminder for the current authenticated user."""
-        return super().retrieve(request, *args, **kwargs)
-
-    @swagger_auto_schema(
-        request_body=ReminderSerializer,
-        responses={
-            200: openapi.Response('Reminder updated successfully',
-                                  ReminderSerializer),
-            400: 'Bad Request',
-            404: 'Not Found',
-            401: 'Unauthorized'
-        },
-        operation_description=("Partially update an existing reminder for the "
-                               "authenticated user."),
-        operation_summary="Partial Update Reminder",
-        tags=['Reminder']
-    )
-    def partial_update(self, request, *args, **kwargs):
-        """Update partialy an existing reminder for the current user."""
-        return super().partial_update(request, *args, **kwargs)
-
-    @swagger_auto_schema(
-        request_body=ReminderSerializer,
-        responses={
-            201: openapi.Response('Reminder created successfully',
-                                  ReminderSerializer),
-            400: 'Bad Request',
-            401: 'Unauthorized'
-        },
-        operation_description=("Create a new reminder for the authenticated"
-                               "user."),
-        operation_summary="Create Reminder",
-        tags=('Reminder',)
-    )
-    def create(self, request, *args, **kwargs):
-        """Create a new reminder for the current authenticated user."""
-        return super().create(request, *args, **kwargs)
-
-    @swagger_auto_schema(
-        request_body=ReminderSerializer,
-        responses={
-            200: openapi.Response('Reminder updated successfully',
-                                  ReminderSerializer),
-            400: 'Bad Request',
-            401: 'Unauthorized'
-        },
-        operation_description=("Update an existing reminder for the "
-                               "authenticated user."),
-        operation_summary="Update Reminder",
-        tags=('Reminder',)
-    )
-    def update(self, request, *args, **kwargs):
-        """Update an existing reminder for the current authenticated user."""
-        return super().update(request, *args, **kwargs)
-
-    @swagger_auto_schema(
-        responses={
-            204: 'Reminder deleted successfully',
-            401: 'Unauthorized'
-        },
-        operation_description="Delete a reminder for the authenticated user.",
-        operation_summary="Delete Reminder",
-        tags=('Reminder',)
-    )
-    def destroy(self, request, *args, **kwargs):
-        """Delete a reminder for the current authenticated user."""
-        return super().destroy(request, *args, **kwargs)
-
-    def get_queryset(self):
-        """Return the queryset of reminders belonging to the current user."""
-        return Reminder.objects.filter(user_id=self.request.user)
-
-    def perform_create(self, serializer):
-        """Save a new reminder with the current user as the owner."""
-        serializer.save(user_id=self.request.user)
+def get_scene_data(request):
+    lat = request.GET.get('lat', '')
+    lon = request.GET.get('lon', '')
+    product_id = request.GET.get('product_id', '')

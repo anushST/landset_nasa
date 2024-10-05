@@ -110,7 +110,7 @@ def plan_remind_view(request):
     return Response({'status': 'Message set successfully'})
 
 
-@swagger_auto_schema(auto_schema=None)
+@swagger_auto_schema('get', auto_schema=None)
 @api_view(['GET'])
 def plan_remind_view_new(request):
     satellites = request.GET.get('satellites', '').split(',')

@@ -1034,3 +1034,177 @@ you should set broker_connection_retry_on_startup to True.
 [2024-10-04 08:31:51,502: INFO/ForkPoolWorker-7] Task api.tasks.plan_remind[57c2162c-8f11-4fb5-bfe8-cfae649288cc] succeeded in 0.07475510599033441s: None
 [2024-10-04 08:40:45,081: INFO/MainProcess] Task api.tasks.plan_remind[fd8d755c-971f-4006-b217-8ffa8e7d4dfe] received
 [2024-10-04 08:40:50,912: INFO/ForkPoolWorker-7] Task api.tasks.plan_remind[fd8d755c-971f-4006-b217-8ffa8e7d4dfe] succeeded in 5.823627852005302s: None
+[2024-10-04 09:30:06,306: INFO/MainProcess] Task api.tasks.plan_remind[1a75409e-e18c-461f-bf12-dcf5bd294fe9] received
+[2024-10-04 09:30:06,316: INFO/MainProcess] Task api.tasks.plan_remind[551ab6c6-4305-4c14-bb7d-79cec6fcdb48] received
+[2024-10-04 09:30:06,322: INFO/MainProcess] Task api.tasks.plan_remind[fb4906c6-9fe4-4008-9baa-dd6dc01d545e] received
+[2024-10-04 09:30:06,327: INFO/MainProcess] Task api.tasks.plan_remind[3424c77f-d3cf-406d-afc5-7ca9e585cfa5] received
+[2024-10-04 09:31:46,320: INFO/MainProcess] Task api.tasks.plan_remind[6d9ed21b-a14d-455a-87cf-f9511ae3bd27] received
+[2024-10-04 09:33:26,336: INFO/MainProcess] Task api.tasks.plan_remind[bc57ba5f-2782-4af6-971a-23ce14c22e8b] received
+[2024-10-04 10:33:26,466: INFO/MainProcess] Task api.tasks.plan_remind[bc57ba5f-2782-4af6-971a-23ce14c22e8b] received
+[2024-10-04 10:33:26,473: INFO/MainProcess] Task api.tasks.plan_remind[1a75409e-e18c-461f-bf12-dcf5bd294fe9] received
+[2024-10-04 10:33:26,480: INFO/MainProcess] Task api.tasks.plan_remind[551ab6c6-4305-4c14-bb7d-79cec6fcdb48] received
+[2024-10-04 10:33:26,487: INFO/MainProcess] Task api.tasks.plan_remind[fb4906c6-9fe4-4008-9baa-dd6dc01d545e] received
+[2024-10-04 10:33:26,493: INFO/MainProcess] Task api.tasks.plan_remind[3424c77f-d3cf-406d-afc5-7ca9e585cfa5] received
+[2024-10-04 10:33:26,500: INFO/MainProcess] Task api.tasks.plan_remind[6d9ed21b-a14d-455a-87cf-f9511ae3bd27] received
+[2024-10-04 11:24:52,830: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[3424c77f-d3cf-406d-afc5-7ca9e585cfa5] raised unexpected: AttributeError("'str' object has no attribute 'strftime'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 35, in plan_remind
+    now = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+AttributeError: 'str' object has no attribute 'strftime'
+[2024-10-04 11:26:12,896: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[fb4906c6-9fe4-4008-9baa-dd6dc01d545e] raised unexpected: AttributeError("'str' object has no attribute 'strftime'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 35, in plan_remind
+    now = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+AttributeError: 'str' object has no attribute 'strftime'
+[2024-10-04 11:26:49,349: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[551ab6c6-4305-4c14-bb7d-79cec6fcdb48] raised unexpected: AttributeError("'str' object has no attribute 'strftime'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 35, in plan_remind
+    now = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+AttributeError: 'str' object has no attribute 'strftime'
+[2024-10-04 11:28:41,813: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[1a75409e-e18c-461f-bf12-dcf5bd294fe9] raised unexpected: AttributeError("'str' object has no attribute 'strftime'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 35, in plan_remind
+    now = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+AttributeError: 'str' object has no attribute 'strftime'
+[2024-10-04 11:31:17,367: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[6d9ed21b-a14d-455a-87cf-f9511ae3bd27] raised unexpected: AttributeError("'str' object has no attribute 'strftime'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 35, in plan_remind
+    now = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+AttributeError: 'str' object has no attribute 'strftime'
+[2024-10-04 11:31:51,182: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[bc57ba5f-2782-4af6-971a-23ce14c22e8b] raised unexpected: AttributeError("'str' object has no attribute 'strftime'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 35, in plan_remind
+    now = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+AttributeError: 'str' object has no attribute 'strftime'
+[2024-10-04 11:54:51,954: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[3424c77f-d3cf-406d-afc5-7ca9e585cfa5] raised unexpected: AttributeError("'str' object has no attribute 'strftime'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 35, in plan_remind
+    now = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+AttributeError: 'str' object has no attribute 'strftime'
+[2024-10-04 11:54:52,242: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[3424c77f-d3cf-406d-afc5-7ca9e585cfa5] raised unexpected: AttributeError("'str' object has no attribute 'strftime'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 35, in plan_remind
+    now = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+AttributeError: 'str' object has no attribute 'strftime'
+[2024-10-04 11:56:12,117: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[fb4906c6-9fe4-4008-9baa-dd6dc01d545e] raised unexpected: AttributeError("'str' object has no attribute 'strftime'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 35, in plan_remind
+    now = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+AttributeError: 'str' object has no attribute 'strftime'
+[2024-10-04 11:56:12,412: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[fb4906c6-9fe4-4008-9baa-dd6dc01d545e] raised unexpected: AttributeError("'str' object has no attribute 'strftime'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 35, in plan_remind
+    now = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+AttributeError: 'str' object has no attribute 'strftime'
+[2024-10-04 11:56:48,558: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[551ab6c6-4305-4c14-bb7d-79cec6fcdb48] raised unexpected: AttributeError("'str' object has no attribute 'strftime'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 35, in plan_remind
+    now = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+AttributeError: 'str' object has no attribute 'strftime'
+[2024-10-04 11:56:48,856: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[551ab6c6-4305-4c14-bb7d-79cec6fcdb48] raised unexpected: AttributeError("'str' object has no attribute 'strftime'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 35, in plan_remind
+    now = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+AttributeError: 'str' object has no attribute 'strftime'
+[2024-10-04 11:58:41,041: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[1a75409e-e18c-461f-bf12-dcf5bd294fe9] raised unexpected: AttributeError("'str' object has no attribute 'strftime'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 35, in plan_remind
+    now = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+AttributeError: 'str' object has no attribute 'strftime'
+[2024-10-04 11:58:41,335: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[1a75409e-e18c-461f-bf12-dcf5bd294fe9] raised unexpected: AttributeError("'str' object has no attribute 'strftime'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 35, in plan_remind
+    now = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+AttributeError: 'str' object has no attribute 'strftime'
+[2024-10-04 12:01:16,595: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[6d9ed21b-a14d-455a-87cf-f9511ae3bd27] raised unexpected: AttributeError("'str' object has no attribute 'strftime'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 35, in plan_remind
+    now = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+AttributeError: 'str' object has no attribute 'strftime'
+[2024-10-04 12:01:16,885: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[6d9ed21b-a14d-455a-87cf-f9511ae3bd27] raised unexpected: AttributeError("'str' object has no attribute 'strftime'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 35, in plan_remind
+    now = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+AttributeError: 'str' object has no attribute 'strftime'
+[2024-10-04 12:01:50,423: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[bc57ba5f-2782-4af6-971a-23ce14c22e8b] raised unexpected: AttributeError("'str' object has no attribute 'strftime'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 35, in plan_remind
+    now = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+AttributeError: 'str' object has no attribute 'strftime'
+[2024-10-04 12:01:50,719: ERROR/ForkPoolWorker-7] Task api.tasks.plan_remind[bc57ba5f-2782-4af6-971a-23ce14c22e8b] raised unexpected: AttributeError("'str' object has no attribute 'strftime'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/src/app/api/tasks.py", line 35, in plan_remind
+    now = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+AttributeError: 'str' object has no attribute 'strftime'
