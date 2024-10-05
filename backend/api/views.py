@@ -12,7 +12,7 @@ from rest_framework.response import Response
 
 from .models import Reminder, SatelliteAcqusition
 from .serializers import ReminderSerializer, LandsatSearchSerializer, SatelliteAcqusitionSerializer
-# from .message_retreive import get_scene_data
+from .message_retreive import get_scene_data
 
 r = redis.Redis(host='redis', port=6379, db=0)
 
@@ -228,8 +228,8 @@ def get_scene_data_view(request):
 
     try:
         # Вызов функции для получения данных сцены
-        # data = get_scene_data(product_id, lat, lon)
-        return Response({}, status=status.HTTP_200_OK)
+        data = get_scene_data(product_id, lat, lon)
+        return Response(data, status=status.HTTP_200_OK)
     except Exception as e:
         # Обработка любых ошибок
         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
