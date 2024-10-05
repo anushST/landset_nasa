@@ -70,5 +70,3 @@ def get_scene_data(product_id, lat, lon):
                     'row': row, 'col': col, 'pixel_value': pixel_value,
                 }
     return output
-
-print(get_scene_data('LC08_L2SP_154033_20240924_20240928_02_T1', 38.5548, 68.7659))

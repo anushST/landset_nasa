@@ -1,4 +1,4 @@
-FROM python:3.9-slim-bullseye
+FROM python:3.9-slim
 
 WORKDIR /usr/src/app
 
@@ -12,5 +12,7 @@ RUN pip install -r requirements.txt
 COPY ./entrypoint.sh /usr/src/app/entrypoint.sh
 
 COPY . /usr/src/app/
+
+RUN chmod +x entrypoint.sh
 
 ENTRYPOINT [ "/usr/src/app/entrypoint.sh" ]

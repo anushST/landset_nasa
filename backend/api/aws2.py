@@ -5,6 +5,7 @@ import json
 from pprint import pprint
 from datetime import datetime, timedelta
 import sqlite3
+import psycopg2
 
 API_URL = "https://api.spectator.earth/acquisition-plan/"
 API_KEY = "St5HGKwm4pT9D2i55X5fMs"
@@ -15,18 +16,25 @@ def get_the_last_date(satellite):
     conn = sqlite3.connect("db.sqlite3")
     cursor = conn.cursor()
 
-    cursor.execute('''
-    SELECT has_info_date
-    FROM api_acqusitiondatesinfo
-    WHERE satellite = ?
-    ORDER BY has_info_date DESC
-    LIMIT 1;
-    ''', (satellite,))
+    with psycopg2.connect(
+        user="postgres",
+        password="postgres",
+        host="db",
+        port="5432",
+        database="postgres"
+    ) as connection:
+        with connection.cursor() as cursor:
+            cursor.execute('''
+            SELECT has_info_date
+            FROM api_acqusitiondatesinfo
+            WHERE satellite = %s
+            ORDER BY has_info_date DESC
+            LIMIT 1;
+            ''', (satellite,))
 
-    last_date = cursor.fetchone()
-    conn.close()
+            last_date = cursor.fetchone()
 
-    return last_date[0] if last_date else None
+            return last_date[0] if last_date else None
 
 
 async def fetch_and_save_data():
@@ -62,26 +70,38 @@ async def fetch_and_save_data():
 
 
 async def save_to_db(features, datetime: datetime, satellite):
-    conn = sqlite3.connect("db.sqlite3")
-    cursor = conn.cursor()
+    conn = psycopg2.connect(
+        user='postgres',
+        password='postgres',
+        database='postgres',
+        host='db',
+        port='5432'
+    )
 
-    for feature in features:
-        properties = feature["properties"]
-        date = properties['begin_time'].split('T')
-        date = f'{date[0]} {date[1][:-1]}'
-        cursor.execute('''
-            INSERT INTO api_satelliteacqusition (path, row, satellite, datetime)
-            VALUES (?, ?, ?, ?)
-        ''', (properties["path"], properties["row"], properties["satellite"], date))
+    try:
+        with conn:
+            with conn.cursor() as cursor:
+                for feature in features:
+                    properties = feature["properties"]
+                    date = properties['begin_time'].split('T')
+                    date = f'{date[0]} {date[1][:-1]}'
+                    
+                    cursor.execute('''
+                        INSERT INTO api_satelliteacqusition (path, row, satellite, datetime)
+                        VALUES (%s, %s, %s, %s)
+                    ''', (properties["path"], properties["row"], properties["satellite"], date))
 
-    date_ = datetime.strftime("%Y-%m-%d %H:%M:%S")
-    cursor.execute('''
-            INSERT INTO api_acqusitiondatesinfo (satellite, has_info_date)
-            VALUES (?, ?)
-        ''', (satellite, date_))
+                date_ = datetime.strftime("%Y-%m-%d %H:%M:%S")
+                
+                cursor.execute('''
+                    INSERT INTO api_acqusitiondatesinfo (satellite, has_info_date)
+                    VALUES (%s, %s)
+                ''', (satellite, date_))
 
-    conn.commit()
-    conn.close()
+    except Exception as e:
+        print("Ошибка при сохранении в БД:", e)
+    finally:
+        conn.close()
 
 
 def BuildSquare(lon, lat, delta):
